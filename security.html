@@ -21,7 +21,6 @@
         <a href="model.html">Model</a>
         <a href="run-anywhere.html">Run anywhere</a>
         <a href="use-cases.html">Use cases</a>
-        <a class="active" href="security.html">Security</a>
         <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
     </header>
@@ -55,6 +54,62 @@
             <h3>Encrypted environment secrets</h3>
             <p>Environment secrets are encrypted and access-controlled instead of embedded into apps.</p>
           </article>
+        </div>
+      </section>
+
+      <section class="technical">
+        <div class="section-heading">
+          <p class="eyebrow">Security model</p>
+          <h2>The platform governs creation. The artifact runs with only what it needs.</h2>
+        </div>
+        <div class="technical-grid">
+          <article>
+            <h3>Identity</h3>
+            <p>
+              Users and automation are authenticated at the platform boundary,
+              not treated as anonymous editors of production behavior.
+            </p>
+          </article>
+          <article>
+            <h3>Authorization</h3>
+            <p>
+              Roles define who can edit models, manage environments, view
+              production state and trigger operational actions.
+            </p>
+          </article>
+          <article>
+            <h3>Secrets</h3>
+            <p>
+              Environment secrets are encrypted and scoped to the places that
+              need them, instead of being copied into model logic or source files.
+            </p>
+          </article>
+          <article>
+            <h3>Visibility</h3>
+            <p>
+              Production inspection is explicit, read-only by default and
+              separate from permissions that can change or redeploy the product.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="two-column section-band">
+        <div>
+          <p class="eyebrow">Compiled boundary</p>
+          <h2>Portable does not mean uncontrolled.</h2>
+        </div>
+        <div class="stacked-copy">
+          <p>
+            A compiled Railix application should not carry editor privileges,
+            platform admin access or unbounded production permissions just because
+            it was created in Railix.
+          </p>
+          <p>
+            The goal is a narrow runtime surface: the application gets the
+            configuration, credentials and execution paths required for its
+            target environment, while governance remains visible in the model.
+          </p>
         </div>
       </section>
     </main>
