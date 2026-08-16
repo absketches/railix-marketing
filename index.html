@@ -5,44 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Railix helps teams model, verify, compile, deploy, and operate software products from one visual source of truth."
+      content="Railix helps teams create, verify, compile, deploy and operate software products from one visual executable model."
     />
-    <title>Railix | Build Software From One Executable Model</title>
+    <title>Railix | Software Products From One Executable Model</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/" aria-label="Railix home">
+      <a class="brand" href="index.html" aria-label="Railix home">
         <span class="brand-mark">R</span>
         <span>Railix</span>
       </a>
-      <nav aria-label="Main navigation">
-        <a href="#product">Product</a>
-        <a href="#security">Security</a>
-        <a href="#investors">Investors</a>
-        <a class="nav-cta" href="mailto:hello@railix.dev">Contact</a>
+      <nav class="site-tabs" aria-label="Main navigation">
+        <a class="active" href="index.html">Overview</a>
+        <a href="model.html">Model</a>
+        <a href="run-anywhere.html">Run anywhere</a>
+        <a href="use-cases.html">Use cases</a>
+        <a href="security.html">Security</a>
+        <a class="nav-cta" href="contact.html">Contact</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Executable operating model</p>
-          <h1>Build software from one visual source of truth.</h1>
+          <p class="eyebrow">Software without the platform trap</p>
+          <h1>Create software as one executable model.</h1>
           <p class="hero-text">
-            Railix brings flows, steps, examples, deployment, operations, secrets,
-            and production visibility into one governed model, then compiles it
-            into a secure standalone application.
+            Railix lets teams design the behavior, verification, deployment,
+            security and operations of a product in one visual system, then
+            compile it into a fast standalone application they can run anywhere.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="mailto:hello@railix.dev">Request early access</a>
-            <a class="button secondary" href="#model">See how it works</a>
+            <a class="button secondary" href="model.html">See the model</a>
           </div>
         </div>
 
         <div class="hero-visual" aria-label="Railix workflow canvas preview">
           <img
-            src="public/railix-workflow-canvas.png"
+            src="public/railix-workflow.png"
             alt="Railix visual workflow canvas with connected flow steps and conditional branches"
           />
         </div>
@@ -50,172 +51,74 @@
 
       <section class="problem section-band">
         <div class="section-heading">
-          <p class="eyebrow">The software trap</p>
-          <h2>Products are built across too many disconnected surfaces.</h2>
+          <p class="eyebrow">The hidden cost of software</p>
+          <h2>Every product becomes a pile of code, glue, YAML, secrets and folklore.</h2>
         </div>
         <div class="problem-grid">
           <article>
-            <h3>Code</h3>
-            <p>Application behavior is implemented in one place and explained somewhere else.</p>
+            <h3>Behavior drifts</h3>
+            <p>The product works one way in code, another way in diagrams and a third way in support notes.</p>
           </article>
           <article>
-            <h3>Delivery</h3>
-            <p>CI/CD, deployment rules, environments, and infrastructure become a second product.</p>
+            <h3>Delivery sprawls</h3>
+            <p>CI/CD, infrastructure, environment rules and deployment scripts become a second system to maintain.</p>
           </article>
           <article>
-            <h3>Operations</h3>
-            <p>Runbooks, alerts, dashboards, support knowledge, and audit trails drift from reality.</p>
+            <h3>Knowledge disappears</h3>
+            <p>Runbooks, edge cases, examples and production rituals stay in scattered tools and people’s heads.</p>
           </article>
           <article>
-            <h3>Trust</h3>
-            <p>Secrets, access, and production visibility are too often bolted on after the fact.</p>
+            <h3>Platforms lock in</h3>
+            <p>Teams gain convenience, but their runtime and operating model become tied to someone else’s platform.</p>
           </article>
         </div>
       </section>
 
-      <section id="model" class="model">
+      <section class="model">
         <div class="section-heading narrow">
-          <p class="eyebrow">How Railix works</p>
-          <h2>Model, verify, compile, operate.</h2>
+          <p class="eyebrow">The Railix shift</p>
+          <h2>Model the product once. Use it everywhere.</h2>
         </div>
 
         <div class="flow-line" aria-label="Railix process">
           <article>
             <span>01</span>
-            <h3>Model</h3>
-            <p>Create software products from visual Flows and Steps.</p>
+            <h3>Design</h3>
+            <p>Build the product from visual Flows and Steps that describe real behavior.</p>
           </article>
           <article>
             <span>02</span>
             <h3>Verify</h3>
-            <p>Local examples become the build gate for the model.</p>
+            <p>Examples become living specifications and the gate before anything ships.</p>
           </article>
           <article>
             <span>03</span>
             <h3>Compile</h3>
-            <p>Passing models compile into immutable standalone applications.</p>
+            <p>Passing models compile into immutable standalone artifacts.</p>
           </article>
           <article>
             <span>04</span>
             <h3>Operate</h3>
-            <p>The same model guides deployment, support, audit, and future distributed execution.</p>
+            <p>The same source of truth guides deployment, support, audit and production visibility.</p>
           </article>
         </div>
       </section>
 
-      <section id="product" class="two-column">
-        <div>
-          <p class="eyebrow">For product builders</p>
-          <h2>Understandable to developers, product, support, auditors, and AI systems.</h2>
-        </div>
-        <div class="stacked-copy">
-          <p>
-            Railix Creator makes the application model visible and executable,
-            so teams do not maintain separate diagrams, YAML estates, test
-            assumptions, and operational folklore.
-          </p>
-          <p>
-            Each stakeholder can inspect the same underlying system: what it does,
-            how it is verified, where it runs, who can see production, and how it
-            should be operated.
-          </p>
-        </div>
-      </section>
-
-      <section class="ownership section-band">
-        <div class="section-heading">
-          <p class="eyebrow">No platform trap</p>
-          <h2>Build with Railix. Run on your terms.</h2>
-        </div>
-        <div class="ownership-panel">
-          <p>
-            Railix is designed so teams can use the platform without binding their
-            runtime to it. When a model passes, the compiled application can run
-            on infrastructure you control, from cloud environments to a Raspberry Pi.
-          </p>
-          <div class="ownership-points">
-            <span>No vendor lock-in</span>
-            <span>Self-hosted deployment</span>
-            <span>Portable compiled artifacts</span>
-            <span>Edge-ready operating model</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="security" class="two-column security">
-        <div>
-          <p class="eyebrow">Security boundary</p>
-          <h2>Access and secrets belong to the platform, not scattered application code.</h2>
-        </div>
-        <div class="security-list">
-          <article>
-            <h3>Role-based access</h3>
-            <p>Production capabilities are explicit and governed by role.</p>
-          </article>
-          <article>
-            <h3>Read-only production visibility</h3>
-            <p>Teams can inspect production state only when that visibility is enabled.</p>
-          </article>
-          <article>
-            <h3>Encrypted environment secrets</h3>
-            <p>Secrets are access-controlled instead of embedded inside applications.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="comparison">
-        <div class="section-heading narrow">
-          <p class="eyebrow">Different by design</p>
-          <h2>Not another workflow runtime.</h2>
-        </div>
-        <div class="comparison-table" role="table" aria-label="Railix comparison">
-          <div class="table-row table-head" role="row">
-            <span role="columnheader">Category</span>
-            <span role="columnheader">Workflow platforms</span>
-            <span role="columnheader">Railix</span>
-          </div>
-          <div class="table-row" role="row">
-            <span role="cell">Runtime</span>
-            <span role="cell">Runs inside a platform runtime</span>
-            <span role="cell">Compiles into a standalone application</span>
-          </div>
-          <div class="table-row" role="row">
-            <span role="cell">Hosting</span>
-            <span role="cell">Often tied to hosted or managed services</span>
-            <span role="cell">Runs on your infrastructure, from cloud to edge</span>
-          </div>
-          <div class="table-row" role="row">
-            <span role="cell">Source of truth</span>
-            <span role="cell">Workflows, code, CI, secrets, and runbooks drift apart</span>
-            <span role="cell">One visual model governs behavior and operations</span>
-          </div>
-          <div class="table-row" role="row">
-            <span role="cell">Verification</span>
-            <span role="cell">Testing often lives outside the workflow</span>
-            <span role="cell">Local examples act as the build gate</span>
-          </div>
-          <div class="table-row" role="row">
-            <span role="cell">Ownership</span>
-            <span role="cell">Platform-centered execution</span>
-            <span role="cell">Portable artifacts and team-owned runtime</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="investors" class="investor-callout">
-        <p class="eyebrow">For investors</p>
-        <h2>Railix captures creation value without forcing runtime dependency.</h2>
+      <section class="final-callout">
+        <p class="eyebrow">One model. One artifact. Your infrastructure.</p>
+        <h2>Ship software that stays understandable after it leaves the builder.</h2>
         <p>
-          The platform becomes the compiler, governance layer, and shared model for
-          software creation and operation, not a permanent tax on every execution path.
+          Railix is for teams that want software creation, verification,
+          deployment and operations to come from the same place without giving
+          up control of where the final application runs.
         </p>
-        <a class="button primary" href="mailto:hello@railix.dev">Start a conversation</a>
+        <a class="button primary" href="use-cases.html">Explore production fits</a>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>Railix</span>
-      <span>Model-driven software creation and operation.</span>
+      <span>Executable software models. Portable compiled applications.</span>
     </footer>
   </body>
 </html>
