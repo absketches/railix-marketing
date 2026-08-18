@@ -1,75 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Contact Railix with a copied email draft. No automatic redirect or mail client handoff."
-    />
-    <title>Railix | Contact</title>
+    <meta name="description" content="Kontaktiere Railix mit einer kopierbaren E-Mail-Vorlage. Keine automatische Weiterleitung und kein Mail-Client-Handoff." />
+    <title>Railix | Kontakt</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="messages/de.js" defer></script>
+    <script src="messages/en.js" defer></script>
+    <script src="i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="contact">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Railix home">
-        <span class="brand-mark">R</span>
-        <span>Railix</span>
-      </a>
-      <nav class="site-tabs" aria-label="Main navigation">
-        <a href="index.html">Overview</a>
-        <a href="model.html">Model</a>
-        <a href="run-anywhere.html">Run anywhere</a>
-        <a href="use-cases.html">Use cases</a>
-        <a class="active nav-cta" href="contact.html">Contact</a>
-      </nav>
+      <a class="brand" href="index.html" aria-label="Railix Startseite"><span class="brand-mark">R</span><span>Railix</span></a>
+      <div class="header-actions">
+        <nav class="site-tabs" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav.overview">Überblick</a>
+          <a href="model.html" data-i18n="nav.model">Model</a>
+          <a href="run-anywhere.html" data-i18n="nav.runAnywhere">Überall ausführen</a>
+          <a href="use-cases.html" data-i18n="nav.useCases">Anwendungsfälle</a>
+          <a class="active nav-cta" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+        <div class="language-switch" aria-label="Sprache wählen">
+          <button class="active" type="button" data-language-switch="de" aria-pressed="true">DE</button>
+          <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="page-hero contact-hero">
-        <p class="eyebrow">Contact Railix</p>
-        <h1>Email template</h1>
-        <p>
-          We are excited to help you operate lean and without vendor lock-ins!
-        </p>
+        <p class="eyebrow" data-i18n="contact.eyebrow">Railix kontaktieren</p>
+        <h1 data-i18n="contact.h1">E-Mail-Vorlage</h1>
+        <p data-i18n="contact.intro">Wir freuen uns darauf, dir zu helfen, schlank und ohne Vendor Lock-in zu arbeiten.</p>
       </section>
 
       <section class="contact-section section-band">
         <div class="contact-card">
           <div class="contact-field">
-            <span>To</span>
+            <span data-i18n="contact.to">An</span>
             <p>basuabhi92@gmail.com</p>
           </div>
-          <div class="message-draft" aria-label="Draft email message">
-            <span>Draft message</span>
-            <pre>Hello Railix Team,
+          <div class="message-draft" aria-label="E-Mail-Entwurf">
+            <span data-i18n="contact.draft">Nachrichtenvorlage</span>
+            <pre data-i18n="contact.message">Hallo Railix Team,
 
-I would like to use the Railix model to build my [niche] product.
+ich möchte das Railix-Modell nutzen, um mein Produkt im Bereich [Nische] zu bauen.
 
-I am interested in:
-- creating software from visual Flows and Steps
-- compiling portable applications and deploying on a public cloud platform
-- running Railix-built products on our own infrastructure (Raspberry Pi)
-- [add all the things about our product that excites you]
+Ich interessiere mich für:
+- Software aus visuellen Flows und Steps zu erstellen
+- portable Anwendungen zu kompilieren und auf einer Public-Cloud-Plattform zu deployen
+- mit Railix gebaute Produkte auf unserer eigenen Infrastruktur auszuführen (Raspberry Pi)
+- [ergänze alles an eurem Produkt, das dich begeistert]
 
-A little context about what we are building:
-- a backend application that handles business workflows
-- CI workflows that currently depend on custom code, CI/CD configuration, secrets and runbooks
-- a system we may want to run on our own infrastructure
-- [add all that you want to share]
+Ein bisschen Kontext dazu, was wir bauen:
+- eine Backend-Anwendung, die Geschäftsworkflows abbildet
+- CI-Workflows, die aktuell von Custom Code, CI/CD-Konfiguration, Secrets und Runbooks abhängen
+- ein System, das wir möglicherweise auf eigener Infrastruktur betreiben wollen
+- [ergänze alles, was du teilen möchtest]
 
-Cheers,
-[Your name]
-[Your company name]
-</pre>
+Viele Grüße
+[Dein Name]
+[Dein Firmenname]</pre>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>Railix</span>
-      <span>Executable software models. Portable compiled applications.</span>
-    </footer>
+    <footer class="site-footer"><span>Railix</span><span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span></footer>
   </body>
 </html>

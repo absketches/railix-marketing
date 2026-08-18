@@ -1,60 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Railix is a strong fit for production software where behavior, verification, deployment and operations must stay connected."
-    />
-    <title>Railix | Use Cases</title>
+    <meta name="description" content="Railix passt besonders zu Produktionssoftware, bei der Verhalten, Prüfung, Deployment und Betrieb verbunden bleiben müssen." />
+    <title>Railix | Anwendungsfälle</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="messages/de.js" defer></script>
+    <script src="messages/en.js" defer></script>
+    <script src="i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="useCases">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Railix home">
-        <span class="brand-mark">R</span>
-        <span>Railix</span>
-      </a>
-      <nav class="site-tabs" aria-label="Main navigation">
-        <a href="index.html">Overview</a>
-        <a href="model.html">Model</a>
-        <a href="run-anywhere.html">Run anywhere</a>
-        <a class="active" href="use-cases.html">Use cases</a>
-        <a class="nav-cta" href="contact.html">Contact</a>
-      </nav>
+      <a class="brand" href="index.html" aria-label="Railix Startseite"><span class="brand-mark">R</span><span>Railix</span></a>
+      <div class="header-actions">
+        <nav class="site-tabs" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav.overview">Überblick</a>
+          <a href="model.html" data-i18n="nav.model">Model</a>
+          <a href="run-anywhere.html" data-i18n="nav.runAnywhere">Überall ausführen</a>
+          <a class="active" href="use-cases.html" data-i18n="nav.useCases">Anwendungsfälle</a>
+          <a class="nav-cta" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+        <div class="language-switch" aria-label="Sprache wählen">
+          <button class="active" type="button" data-language-switch="de" aria-pressed="true">DE</button>
+          <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="page-hero">
-        <p class="eyebrow">Where Railix fits</p>
-        <h1>For products where behavior, verification and operations must stay connected.</h1>
-        <p>
-          Railix is strongest when a product has real branching logic, external
-          integrations, production consequences and stakeholders who need to
-          understand the same system from different angles.
-        </p>
+        <p class="eyebrow" data-i18n="useCases.eyebrow">Wo Railix passt</p>
+        <h1 data-i18n="useCases.h1">Für Produkte, bei denen Verhalten, Prüfung und Betrieb verbunden bleiben müssen.</h1>
+        <p data-i18n="useCases.intro">Railix ist besonders stark, wenn ein Produkt echte Verzweigungslogik, externe Integrationen, produktive Konsequenzen und Stakeholder hat, die dasselbe System aus unterschiedlichen Blickwinkeln verstehen müssen.</p>
       </section>
 
       <section class="fit section-band">
         <div class="fit-columns">
           <div class="fit-card good">
-            <h3>Great production fits</h3>
+            <h3 data-i18n="useCases.goodTitle">Besonders gute Einsatzbereiche</h3>
             <ul>
-              <li>Customer onboarding and KYC backends with branching rules, audit needs and human review paths.</li>
-              <li>Integration APIs that normalize data between CRMs, ERPs, payments, logistics and internal systems.</li>
-              <li>Serverless event processors for webhooks, billing events, alerts, queue jobs and scheduled operations.</li>
-              <li>Internal operations products where support, product and engineering need to understand the same workflow.</li>
-              <li>Edge or private-network services that must run without depending on a hosted workflow platform.</li>
-              <li>Regulated automation where examples, access, secrets and production visibility need a traceable model.</li>
+              <li data-i18n="useCases.good1">Customer-Onboarding- und KYC-Backends mit verzweigten Regeln, Audit-Anforderungen und menschlichen Review-Pfaden.</li>
+              <li data-i18n="useCases.good2">Integrations-APIs, die Daten zwischen CRMs, ERPs, Payments, Logistik und internen Systemen normalisieren.</li>
+              <li data-i18n="useCases.good3">Serverless Event Processor für Webhooks, Billing Events, Alerts, Queue Jobs und geplante Betriebsaufgaben.</li>
+              <li data-i18n="useCases.good4">Interne Operations-Produkte, bei denen Support, Produkt und Engineering denselben Workflow verstehen müssen.</li>
+              <li data-i18n="useCases.good5">Edge- oder Private-Network-Services, die ohne gehostete Workflow-Plattform laufen müssen.</li>
+              <li data-i18n="useCases.good6">Regulierte Automatisierung, bei der Beispiele, Zugriff, Secrets und Produktionssichtbarkeit ein nachvollziehbares Modell brauchen.</li>
             </ul>
           </div>
           <div class="fit-card caution">
-            <h3>Not on our list</h3>
+            <h3 data-i18n="useCases.cautionTitle">Wofür Railix weniger gedacht ist</h3>
             <ul>
-              <li>Pixel-heavy consumer frontends where the main work is visual craft, animation and client-side interaction.</li>
-              <li>High-performance numerical computing, graphics engines or low-level systems programming.</li>
-              <li>Products that intentionally depend on a vendor’s managed runtime, marketplace or hosted app ecosystem.</li>
+              <li data-i18n="useCases.caution1">Pixelintensive Consumer-Frontends, bei denen der Hauptaufwand visuelle Gestaltung, Animation und Client-Interaktion ist.</li>
+              <li data-i18n="useCases.caution2">Hochperformantes numerisches Rechnen, Grafik-Engines oder Low-Level-Systemprogrammierung.</li>
+              <li data-i18n="useCases.caution3">Produkte, die absichtlich von der Managed Runtime, dem Marketplace oder dem gehosteten App-Ökosystem eines Anbieters abhängen.</li>
             </ul>
           </div>
         </div>
@@ -62,47 +61,24 @@
 
       <section class="comparison">
         <div class="section-heading narrow">
-          <p class="eyebrow">Not another automation canvas</p>
-          <h2>Railix does not just run workflows. It creates the application.</h2>
+          <p class="eyebrow" data-i18n="useCases.comparisonEyebrow">Nicht noch ein Automatisierungs-Canvas</p>
+          <h2 data-i18n="useCases.comparisonTitle">Railix führt nicht nur Workflows aus. Es erstellt die Anwendung.</h2>
         </div>
-        <div class="comparison-table" role="table" aria-label="Railix comparison">
+        <div class="comparison-table" role="table" aria-label="Railix Vergleich">
           <div class="table-row table-head" role="row">
-            <span role="columnheader">Category</span>
-            <span role="columnheader">Traditional workflow tools</span>
+            <span role="columnheader" data-i18n="useCases.category">Kategorie</span>
+            <span role="columnheader" data-i18n="useCases.traditional">Klassische Workflow-Tools</span>
             <span role="columnheader">Railix</span>
           </div>
-          <div class="table-row" role="row">
-            <span role="cell">Runtime</span>
-            <span role="cell">Automate tasks inside a running platform</span>
-            <span role="cell">Compiles the product into a standalone application</span>
-          </div>
-          <div class="table-row" role="row">
-            <span role="cell">Hosting</span>
-            <span role="cell">Often depends on hosted or managed platform services</span>
-            <span role="cell">Runs on your infrastructure, from cloud to edge devices</span>
-          </div>
-          <div class="table-row" role="row">
-            <span role="cell">Source of truth</span>
-            <span role="cell">Workflow logic sits beside separate code, CI, secrets and runbooks</span>
-            <span role="cell">One executable model governs behavior, verification and operations</span>
-          </div>
-          <div class="table-row" role="row">
-            <span role="cell">Verification</span>
-            <span role="cell">Testing and examples often live outside the automation</span>
-            <span role="cell">Local examples are part of the model and gate the build</span>
-          </div>
-          <div class="table-row" role="row">
-            <span role="cell">Ownership</span>
-            <span role="cell">Platform-centered execution</span>
-            <span role="cell">Portable artifacts, self-hosting and team-owned runtime</span>
-          </div>
+          <div class="table-row" role="row"><span role="cell">Runtime</span><span role="cell" data-i18n="useCases.runtimeTraditional">Automatisieren Aufgaben innerhalb einer laufenden Plattform</span><span role="cell" data-i18n="useCases.runtimeRailix">Kompiliert das Produkt zu einer eigenständigen Anwendung</span></div>
+          <div class="table-row" role="row"><span role="cell">Hosting</span><span role="cell" data-i18n="useCases.hostingTraditional">Hängt oft von gehosteten oder gemanagten Plattformservices ab</span><span role="cell" data-i18n="useCases.hostingRailix">Läuft auf deiner Infrastruktur, von Cloud bis Edge-Geräten</span></div>
+          <div class="table-row" role="row"><span role="cell" data-i18n="useCases.source">Quelle der Wahrheit</span><span role="cell" data-i18n="useCases.sourceTraditional">Workflow-Logik liegt neben separatem Code, CI, Secrets und Runbooks</span><span role="cell" data-i18n="useCases.sourceRailix">Ein ausführbares Modell steuert Verhalten, Prüfung und Betrieb</span></div>
+          <div class="table-row" role="row"><span role="cell" data-i18n="useCases.verification">Prüfung</span><span role="cell" data-i18n="useCases.verificationTraditional">Tests und Beispiele leben oft außerhalb der Automatisierung</span><span role="cell" data-i18n="useCases.verificationRailix">Lokale Beispiele sind Teil des Modells und geben den Build frei</span></div>
+          <div class="table-row" role="row"><span role="cell">Ownership</span><span role="cell" data-i18n="useCases.ownershipTraditional">Plattformzentrierte Ausführung</span><span role="cell" data-i18n="useCases.ownershipRailix">Portable Artefakte, Self-Hosting und eine Runtime im Besitz des Teams</span></div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>Railix</span>
-      <span>Executable software models. Portable compiled applications.</span>
-    </footer>
+    <footer class="site-footer"><span>Railix</span><span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span></footer>
   </body>
 </html>

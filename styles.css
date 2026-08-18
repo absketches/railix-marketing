@@ -87,6 +87,40 @@ nav {
   font-weight: 700;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 3px;
+  border: 1px solid rgba(87, 83, 71, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.76);
+}
+
+.language-switch button {
+  min-width: 38px;
+  min-height: 28px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.language-switch button.active {
+  background: var(--ink);
+  color: var(--white);
+}
+
 nav a {
   white-space: nowrap;
 }
@@ -627,9 +661,16 @@ p {
     align-items: flex-start;
   }
 
+  .header-actions {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+  }
+
   nav {
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 10px 16px;
   }
 

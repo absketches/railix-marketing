@@ -1,129 +1,84 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Railix Creator turns software products into a visual executable model that teams and AI systems can reason about."
+      content="Railix Creator macht Softwareprodukte zu einem visuellen ausführbaren Modell, über das Teams und KI-Systeme nachdenken können."
     />
-    <title>Railix | The Model</title>
+    <title>Railix | Das Modell</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="messages/de.js" defer></script>
+    <script src="messages/en.js" defer></script>
+    <script src="i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="model">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Railix home">
-        <span class="brand-mark">R</span>
-        <span>Railix</span>
-      </a>
-      <nav class="site-tabs" aria-label="Main navigation">
-        <a href="index.html">Overview</a>
-        <a class="active" href="model.html">Model</a>
-        <a href="run-anywhere.html">Run anywhere</a>
-        <a href="use-cases.html">Use cases</a>
-        <a class="nav-cta" href="contact.html">Contact</a>
-      </nav>
+      <a class="brand" href="index.html" aria-label="Railix Startseite"><span class="brand-mark">R</span><span>Railix</span></a>
+      <div class="header-actions">
+        <nav class="site-tabs" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav.overview">Überblick</a>
+          <a class="active" href="model.html" data-i18n="nav.model">Model</a>
+          <a href="run-anywhere.html" data-i18n="nav.runAnywhere">Überall ausführen</a>
+          <a href="use-cases.html" data-i18n="nav.useCases">Anwendungsfälle</a>
+          <a class="nav-cta" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+        <div class="language-switch" aria-label="Sprache wählen">
+          <button class="active" type="button" data-language-switch="de" aria-pressed="true">DE</button>
+          <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="page-hero">
         <p class="eyebrow">Railix Creator</p>
-        <h1>A product model humans and AI systems can reason about.</h1>
-        <p>
-          Railix Creator makes software visible and executable. Teams can see
-          what the product does, how it is verified, where it runs, which
-          secrets it needs and how production should be handled.
-        </p>
+        <h1 data-i18n="model.h1">Ein Produktmodell, das Menschen und KI-Systeme verstehen und auswerten können.</h1>
+        <p data-i18n="model.intro">Railix Creator macht Software sichtbar und ausführbar. Teams sehen, was das Produkt tut, wie es geprüft wird, wo es läuft, welche Secrets es braucht und wie der Produktionsbetrieb gehandhabt werden soll.</p>
       </section>
 
       <section class="two-column section-band">
         <div>
-          <p class="eyebrow">One shared model</p>
-          <h2>Replace separate diagrams, YAML estates, test assumptions and operational folklore.</h2>
+          <p class="eyebrow" data-i18n="model.sharedEyebrow">Ein gemeinsames Modell</p>
+          <h2 data-i18n="model.sharedTitle">Ersetze getrennte Diagramme, YAML-Bestände, Testannahmen und ungeschriebenes Betriebswissen.</h2>
         </div>
         <div class="stacked-copy">
-          <p>
-            Developers get control. Product teams get legibility. Support gets
-            operational context. Auditors get a traceable model. AI systems get a
-            structured source of truth instead of guessing from scattered files.
-          </p>
-          <p>
-            Flows and Steps describe product behavior directly, while examples
-            prove the expected outcomes locally before the compiled artifact is created.
-          </p>
+          <p data-i18n="model.sharedText1">Entwickler behalten Kontrolle. Produktteams bekommen Klarheit. Support bekommt Betriebskontext. Auditoren bekommen ein nachvollziehbares Modell. KI-Systeme bekommen eine strukturierte Quelle der Wahrheit statt verstreuter Dateien.</p>
+          <p data-i18n="model.sharedText2">Flows und Steps beschreiben Produktverhalten direkt, während Beispiele die erwarteten Ergebnisse lokal nachweisen, bevor das kompilierte Artefakt erstellt wird.</p>
         </div>
       </section>
 
       <section class="model">
         <div class="section-heading narrow">
-          <p class="eyebrow">From model to artifact</p>
-          <h2>The creation path stays visible.</h2>
+          <p class="eyebrow" data-i18n="model.pathEyebrow">Vom Modell zum Artefakt</p>
+          <h2 data-i18n="model.pathTitle">Der Weg vom Entwurf zum Artefakt bleibt sichtbar.</h2>
         </div>
-        <div class="flow-line" aria-label="Railix model process">
-          <article>
-            <span>01</span>
-            <h3>Flows</h3>
-            <p>Represent product paths, choices, commands, transformations and outcomes.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Steps</h3>
-            <p>Capture concrete units of behavior that can be verified and compiled.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Examples</h3>
-            <p>Act as living specifications and the build gate for the model.</p>
-          </article>
-          <article>
-            <span>04</span>
-            <h3>Artifact</h3>
-            <p>The passing model becomes a portable application shaped for its target runtime.</p>
-          </article>
+        <div class="flow-line" aria-label="Railix Modellprozess">
+          <article><span>01</span><h3>Flows</h3><p data-i18n="model.flowsText">Stellen Produktpfade, Entscheidungen, Befehle, Transformationen und Ergebnisse dar.</p></article>
+          <article><span>02</span><h3>Steps</h3><p data-i18n="model.stepsText">Erfassen konkrete Verhaltenseinheiten, die geprüft und kompiliert werden können.</p></article>
+          <article><span>03</span><h3 data-i18n="model.examplesTitle">Beispiele</h3><p data-i18n="model.examplesText">Dienen als lebende Spezifikationen und als Freigabe für den Build.</p></article>
+          <article><span>04</span><h3 data-i18n="model.artifactTitle">Artefakt</h3><p data-i18n="model.artifactText">Das geprüfte Modell wird zu einer portablen Anwendung für die gewünschte Laufzeitumgebung.</p></article>
         </div>
       </section>
 
       <section class="technical section-band">
         <div class="section-heading">
-          <p class="eyebrow">Technical shape</p>
-          <h2>The important parts stay explicit.</h2>
+          <p class="eyebrow" data-i18n="model.technicalEyebrow">Technische Form</p>
+          <h2 data-i18n="model.technicalTitle">Die wichtigen Teile bleiben ausdrücklich sichtbar.</h2>
         </div>
         <div class="technical-grid">
-          <article>
-            <h3>Inputs</h3>
-            <p>
-              Define payloads, commands, environment values and external events
-              as the entry points into a Flow.
-            </p>
-          </article>
-          <article>
-            <h3>Behavior</h3>
-            <p>
-              Use Steps for branching, field transformation, validation,
-              command execution and terminal outcomes.
-            </p>
-          </article>
-          <article>
-            <h3>Examples</h3>
-            <p>
-              Capture expected inputs and outputs locally so the model can be
-              checked before an artifact is produced.
-            </p>
-          </article>
-          <article>
-            <h3>Artifact</h3>
-            <p>
-              Compile the passing model into a deployable application target,
-              rather than shipping the editor as the runtime.
-            </p>
-          </article>
+          <article><h3 data-i18n="model.inputsTitle">Eingaben</h3><p data-i18n="model.inputsText">Definiere Payloads, Befehle, Umgebungswerte und externe Events als Einstiegspunkte in einen Flow.</p></article>
+          <article><h3 data-i18n="model.behaviorTitle">Verhalten</h3><p data-i18n="model.behaviorText">Nutze Steps für Verzweigungen, Feldtransformation, Validierung, Befehlsausführung und Endzustände.</p></article>
+          <article><h3 data-i18n="model.examplesTitle">Beispiele</h3><p data-i18n="model.technicalExamplesText">Halte erwartete Ein- und Ausgaben lokal fest, damit das Modell geprüft werden kann, bevor ein Artefakt entsteht.</p></article>
+          <article><h3 data-i18n="model.artifactTitle">Artefakt</h3><p data-i18n="model.technicalArtifactText">Kompiliere das geprüfte Modell zu einem deploybaren Anwendungspaket, statt den Editor als Runtime auszuliefern.</p></article>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>Railix</span>
-      <span>Executable software models. Portable compiled applications.</span>
+      <span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span>
     </footer>
   </body>
 </html>

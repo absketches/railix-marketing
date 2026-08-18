@@ -1,123 +1,128 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Railix helps teams create, verify, compile, deploy and operate software products from one visual executable model."
+      content="Railix hilft Teams, Softwareprodukte aus einem visuellen ausführbaren Modell zu erstellen, zu prüfen, zu kompilieren, bereitzustellen und zu betreiben."
     />
-    <title>Railix | Software Products From One Executable Model</title>
+    <title>Railix | Softwareprodukte aus einem ausführbaren Modell</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="messages/de.js" defer></script>
+    <script src="messages/en.js" defer></script>
+    <script src="i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="home">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Railix home">
+      <a class="brand" href="index.html" aria-label="Railix Startseite">
         <span class="brand-mark">R</span>
         <span>Railix</span>
       </a>
-      <nav class="site-tabs" aria-label="Main navigation">
-        <a class="active" href="index.html">Overview</a>
-        <a href="model.html">Model</a>
-        <a href="run-anywhere.html">Run anywhere</a>
-        <a href="use-cases.html">Use cases</a>
-        <a class="nav-cta" href="contact.html">Contact</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="site-tabs" aria-label="Hauptnavigation">
+          <a class="active" href="index.html" data-i18n="nav.overview">Überblick</a>
+          <a href="model.html" data-i18n="nav.model">Model</a>
+          <a href="run-anywhere.html" data-i18n="nav.runAnywhere">Überall ausführen</a>
+          <a href="use-cases.html" data-i18n="nav.useCases">Anwendungsfälle</a>
+          <a class="nav-cta" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+        <div class="language-switch" aria-label="Sprache wählen">
+          <button class="active" type="button" data-language-switch="de" aria-pressed="true">DE</button>
+          <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Software without the platform trap</p>
-          <h1>Create software as one executable model.</h1>
-          <p class="hero-text">
-            Railix lets teams design the behavior, verification, deployment,
-            security and operations of a product in one visual system, then
-            compile it into a fast standalone application they can run anywhere.
+          <p class="eyebrow" data-i18n="home.eyebrow">Software ohne Plattformfalle</p>
+          <h1 data-i18n="home.h1">Software als ein ausführbares Modell erstellen.</h1>
+          <p class="hero-text" data-i18n="home.intro">
+            Mit Railix entwerfen Teams Verhalten, Prüfung, Deployment, Sicherheit und Betrieb eines Produkts in einem visuellen System und kompilieren daraus eine schnelle, eigenständige Anwendung, die überall laufen kann.
           </p>
           <div class="hero-actions">
-            <a class="button secondary" href="model.html">See the model</a>
+            <a class="button secondary" href="model.html" data-i18n="home.cta">Modell ansehen</a>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Railix workflow canvas preview">
+        <div class="hero-visual" aria-label="Vorschau der Railix Workflow-Arbeitsfläche">
           <img
             src="public/railix-workflow.png"
-            alt="Railix visual workflow canvas with connected flow steps and conditional branches"
+            alt="Visuelle Railix Workflow-Arbeitsfläche mit verbundenen Ablaufschritten und Verzweigungen"
           />
         </div>
       </section>
 
       <section class="problem section-band">
         <div class="section-heading">
-          <p class="eyebrow">The hidden cost of software</p>
-          <h2>Every product becomes a pile of code, glue, YAML, secrets and folklore.</h2>
+          <p class="eyebrow" data-i18n="home.problemEyebrow">Die versteckten Kosten von Software</p>
+          <h2 data-i18n="home.problemTitle">Jedes Produkt wird irgendwann zu einem Stapel aus Code, Integrationslogik, YAML, Secrets und ungeschriebenem Betriebswissen.</h2>
         </div>
         <div class="problem-grid">
           <article>
-            <h3>Behavior drifts</h3>
-            <p>The product works one way in code, another way in diagrams and a third way in support notes.</p>
+            <h3 data-i18n="home.driftTitle">Verhalten läuft auseinander</h3>
+            <p data-i18n="home.driftText">Im Code verhält sich das Produkt anders als in Diagrammen und wieder anders als in Support-Notizen.</p>
           </article>
           <article>
-            <h3>Delivery sprawls</h3>
-            <p>CI/CD, infrastructure, environment rules and deployment scripts become a second system to maintain.</p>
+            <h3 data-i18n="home.deliveryTitle">Auslieferung zerfasert</h3>
+            <p data-i18n="home.deliveryText">CI/CD, Infrastruktur, Umgebungsregeln und Deployment-Skripte werden zu einem zweiten System, das gepflegt werden muss.</p>
           </article>
           <article>
-            <h3>Knowledge disappears</h3>
-            <p>Runbooks, edge cases, examples and production rituals stay in scattered tools and people’s heads.</p>
+            <h3 data-i18n="home.knowledgeTitle">Wissen verschwindet</h3>
+            <p data-i18n="home.knowledgeText">Runbooks, Randfälle, Beispiele und Produktionsroutinen bleiben in verstreuten Tools oder in den Köpfen einzelner Menschen.</p>
           </article>
           <article>
-            <h3>Platforms lock in</h3>
-            <p>Teams gain convenience, but their runtime and operating model become tied to someone else’s platform.</p>
+            <h3 data-i18n="home.lockinTitle">Plattformen binden</h3>
+            <p data-i18n="home.lockinText">Teams gewinnen Komfort, aber Laufzeit und Betriebsmodell hängen am Ende an der Plattform eines anderen Anbieters.</p>
           </article>
         </div>
       </section>
 
       <section class="model">
         <div class="section-heading narrow">
-          <p class="eyebrow">The Railix shift</p>
-          <h2>Model the product once. Use it everywhere.</h2>
+          <p class="eyebrow" data-i18n="home.shiftEyebrow">Der Railix-Wechsel</p>
+          <h2 data-i18n="home.shiftTitle">Das Produkt einmal modellieren. Überall nutzen.</h2>
         </div>
 
-        <div class="flow-line" aria-label="Railix process">
+        <div class="flow-line" aria-label="Railix Prozess">
           <article>
             <span>01</span>
-            <h3>Design</h3>
-            <p>Build the product from visual Flows and Steps that describe real behavior.</p>
+            <h3 data-i18n="home.designTitle">Entwerfen</h3>
+            <p data-i18n="home.designText">Baue das Produkt aus visuellen Flows und Steps, die echtes Verhalten beschreiben.</p>
           </article>
           <article>
             <span>02</span>
-            <h3>Verify</h3>
-            <p>Examples become living specifications and the gate before anything ships.</p>
+            <h3 data-i18n="home.verifyTitle">Prüfen</h3>
+            <p data-i18n="home.verifyText">Beispiele werden zu lebenden Spezifikationen und zum Freigabekriterium, bevor etwas ausgeliefert wird.</p>
           </article>
           <article>
             <span>03</span>
-            <h3>Compile</h3>
-            <p>Passing models compile into immutable standalone artifacts.</p>
+            <h3 data-i18n="home.compileTitle">Kompilieren</h3>
+            <p data-i18n="home.compileText">Gültige Modelle werden zu unveränderlichen eigenständigen Artefakten kompiliert.</p>
           </article>
           <article>
             <span>04</span>
-            <h3>Operate</h3>
-            <p>The same source of truth guides deployment, support, audit and production visibility.</p>
+            <h3 data-i18n="home.operateTitle">Betreiben</h3>
+            <p data-i18n="home.operateText">Dieselbe Quelle der Wahrheit führt Deployment, Support, Audit und Einblick in die Produktion.</p>
           </article>
         </div>
       </section>
 
       <section class="final-callout">
-        <p class="eyebrow">One model. One artifact. Your infrastructure.</p>
-        <h2>Ship software that stays understandable after it leaves the builder.</h2>
-        <p>
-          Railix is for teams that want software creation, verification,
-          deployment and operations to come from the same place without giving
-          up control of where the final application runs.
+        <p class="eyebrow" data-i18n="home.finalEyebrow">Ein Modell. Ein Artefakt. Deine Infrastruktur.</p>
+        <h2 data-i18n="home.finalTitle">Liefere Software aus, die verständlich bleibt, auch nachdem sie den Builder verlassen hat.</h2>
+        <p data-i18n="home.finalText">
+          Railix ist für Teams, die Softwareerstellung, Prüfung, Deployment und Betrieb aus derselben Quelle ableiten wollen, ohne die Kontrolle darüber aufzugeben, wo die fertige Anwendung läuft.
         </p>
-        <a class="button primary" href="use-cases.html">Explore production fits</a>
+        <a class="button primary" href="use-cases.html" data-i18n="home.finalCta">Einsatzbereiche entdecken</a>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>Railix</span>
-      <span>Executable software models. Portable compiled applications.</span>
+      <span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span>
     </footer>
   </body>
 </html>

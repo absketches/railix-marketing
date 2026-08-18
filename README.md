@@ -11,6 +11,8 @@ Static public-facing marketing website for Railix.
 - `security.html` - access, production visibility and secrets positioning
 - `contact.html` - static contact page with a copyable email draft
 - `styles.css` - shared site styles
+- `i18n.js` - German/English language switch behavior
+- `messages/` - per-language message files
 - `public/` - static assets
 
 ## Local Preview

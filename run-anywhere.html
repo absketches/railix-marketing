@@ -1,131 +1,79 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Railix compiles portable applications that can run on your infrastructure, from lambdas and workers to services and edge devices."
-    />
-    <title>Railix | Run Anywhere</title>
+    <meta name="description" content="Railix kompiliert portable Anwendungen, die auf deiner Infrastruktur laufen können, von Lambdas und Workern bis zu Services und Edge-Geräten." />
+    <title>Railix | Überall ausführen</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="messages/de.js" defer></script>
+    <script src="messages/en.js" defer></script>
+    <script src="i18n.js" defer></script>
   </head>
-  <body>
+  <body data-page="run">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Railix home">
-        <span class="brand-mark">R</span>
-        <span>Railix</span>
-      </a>
-      <nav class="site-tabs" aria-label="Main navigation">
-        <a href="index.html">Overview</a>
-        <a href="model.html">Model</a>
-        <a class="active" href="run-anywhere.html">Run anywhere</a>
-        <a href="use-cases.html">Use cases</a>
-        <a class="nav-cta" href="contact.html">Contact</a>
-      </nav>
+      <a class="brand" href="index.html" aria-label="Railix Startseite"><span class="brand-mark">R</span><span>Railix</span></a>
+      <div class="header-actions">
+        <nav class="site-tabs" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav.overview">Überblick</a>
+          <a href="model.html" data-i18n="nav.model">Model</a>
+          <a class="active" href="run-anywhere.html" data-i18n="nav.runAnywhere">Überall ausführen</a>
+          <a href="use-cases.html" data-i18n="nav.useCases">Anwendungsfälle</a>
+          <a class="nav-cta" href="contact.html" data-i18n="nav.contact">Kontakt</a>
+        </nav>
+        <div class="language-switch" aria-label="Sprache wählen">
+          <button class="active" type="button" data-language-switch="de" aria-pressed="true">DE</button>
+          <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="page-hero">
-        <p class="eyebrow">No platform trap</p>
-        <h1>Build with Railix. Run wherever you need.</h1>
-        <p>
-          Railix is designed for teams who want the leverage of a creation
-          platform without surrendering the runtime. A compiled Railix
-          application can run on infrastructure you control.
-        </p>
+        <p class="eyebrow" data-i18n="run.eyebrow">Keine Plattformfalle</p>
+        <h1 data-i18n="run.h1">Mit Railix bauen. Dort ausführen, wo du es brauchst.</h1>
+        <p data-i18n="run.intro">Railix ist für Teams gedacht, die die Vorteile einer Erstellungsplattform nutzen wollen, ohne die Laufzeit aus der Hand zu geben. Eine kompilierte Railix-Anwendung kann auf Infrastruktur laufen, die du kontrollierst.</p>
       </section>
 
       <section class="ownership section-band">
         <div class="ownership-panel">
-          <p>
-            The compiled artifact is the product boundary. That means teams can
-            use Railix to create and govern the application while still deploying
-            to their own cloud, private network, edge environment or small
-            device such as a Raspberry Pi.
-          </p>
+          <p data-i18n="run.ownership">Das kompilierte Artefakt bildet die Grenze des Produkts. Teams können Railix nutzen, um die Anwendung zu erstellen und zu steuern, und trotzdem in ihrer eigenen Cloud, im privaten Netzwerk, in Edge-Umgebungen oder auf kleinen Geräten wie einem Raspberry Pi deployen.</p>
           <div class="ownership-points">
-            <span>No vendor lock-in</span>
-            <span>Self-hosted deployment</span>
-            <span>Portable compiled artifacts</span>
-            <span>Lambda and worker targets</span>
-            <span>Edge-ready operating model</span>
+            <span data-i18n="run.pointLockin">Kein Vendor Lock-in</span>
+            <span data-i18n="run.pointSelfHosted">Deployment auf eigener Infrastruktur</span>
+            <span data-i18n="run.pointPortable">Kompilierte Artefakte, die portabel bleiben</span>
+            <span data-i18n="run.pointLambda">Lambda- und Worker-Targets</span>
+            <span data-i18n="run.pointEdge">Edge-fähiges Betriebsmodell</span>
           </div>
         </div>
       </section>
 
       <section class="deployment">
         <div class="section-heading">
-          <p class="eyebrow">Runtime flexibility</p>
-          <h2>One model can become the shape your product needs.</h2>
+          <p class="eyebrow" data-i18n="run.flexibilityEyebrow">Flexible Laufzeit</p>
+          <h2 data-i18n="run.flexibilityTitle">Ein Modell kann die Form annehmen, die dein Produkt braucht.</h2>
         </div>
         <div class="deployment-grid">
-          <article>
-            <h3>Serverless functions</h3>
-            <p>
-              Compile flows into function-style handlers for request-driven
-              products, scheduled work, event processing and cloud-native
-              environments such as lambdas.
-            </p>
-          </article>
-          <article>
-            <h3>Standalone services</h3>
-            <p>
-              Run compiled applications as long-lived APIs, internal services,
-              command services or private backends on infrastructure your team controls.
-            </p>
-          </article>
-          <article>
-            <h3>Edge and local devices</h3>
-            <p>
-              Deploy portable artifacts close to the work, from shop-floor devices
-              and field equipment to small machines like a Raspberry Pi.
-            </p>
-          </article>
+          <article><h3 data-i18n="run.serverlessTitle">Serverless Functions</h3><p data-i18n="run.serverlessText">Kompiliere Flows zu Function-Handlern für anfragegesteuerte Produkte, geplante Aufgaben, Event-Verarbeitung und cloudnative Umgebungen wie Lambdas.</p></article>
+          <article><h3 data-i18n="run.servicesTitle">Eigenständige Services</h3><p data-i18n="run.servicesText">Führe kompilierte Anwendungen als langlebige APIs, interne Services, Command-Services oder private Backends auf Infrastruktur aus, die dein Team kontrolliert.</p></article>
+          <article><h3 data-i18n="run.edgeTitle">Edge- und lokale Geräte</h3><p data-i18n="run.edgeText">Deploye portable Artefakte nah am Einsatzort, von Geräten in der Fertigung und Feldequipment bis zu kleinen Maschinen wie einem Raspberry Pi.</p></article>
         </div>
       </section>
 
       <section class="technical section-band">
         <div class="section-heading">
-          <p class="eyebrow">Deployment targets</p>
-          <h2>Choose the runtime boundary without changing the product model.</h2>
+          <p class="eyebrow" data-i18n="run.targetsEyebrow">Deployment-Ziele</p>
+          <h2 data-i18n="run.targetsTitle">Wähle die Laufzeitgrenze, ohne das Produktmodell zu ändern.</h2>
         </div>
         <div class="technical-grid">
-          <article>
-            <h3>HTTP handler</h3>
-            <p>
-              Expose a Flow as an API endpoint for request and response style
-              backend products.
-            </p>
-          </article>
-          <article>
-            <h3>Event handler</h3>
-            <p>
-              Run a Flow from webhook payloads, queue messages, schedules or
-              cloud function events.
-            </p>
-          </article>
-          <article>
-            <h3>Worker</h3>
-            <p>
-              Process long-running jobs, integration work or operational tasks
-              on your own infrastructure.
-            </p>
-          </article>
-          <article>
-            <h3>Local binary</h3>
-            <p>
-              Place the compiled application near the system it controls, from
-              private networks to edge devices.
-            </p>
-          </article>
+          <article><h3>HTTP handler</h3><p data-i18n="run.httpText">Stelle einen Flow als API-Endpunkt für anfrage- und antwortorientierte Backend-Produkte bereit.</p></article>
+          <article><h3>Event handler</h3><p data-i18n="run.eventText">Starte einen Flow aus Webhook-Payloads, Queue-Nachrichten, Zeitplänen oder Cloud-Function-Events.</p></article>
+          <article><h3>Worker</h3><p data-i18n="run.workerText">Verarbeite lang laufende Jobs, Integrationsarbeit oder Betriebsaufgaben auf deiner eigenen Infrastruktur.</p></article>
+          <article><h3 data-i18n="run.binaryTitle">Lokales Binary</h3><p data-i18n="run.binaryText">Platziere die kompilierte Anwendung nah an dem System, das sie steuert, vom privaten Netzwerk bis zum Edge-Gerät.</p></article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>Railix</span>
-      <span>Executable software models. Portable compiled applications.</span>
-    </footer>
+    <footer class="site-footer"><span>Railix</span><span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span></footer>
   </body>
 </html>
