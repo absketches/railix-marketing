@@ -1,14 +1,17 @@
 :root {
   color-scheme: light;
-  --paper: #f8f5ed;
+  --paper: #eee7dc;
   --ink: #20221f;
   --muted: #696d65;
   --line: #cbc3b1;
   --teal: #0b7580;
   --teal-dark: #094c53;
   --orange: #d95f33;
-  --white: #fffdf8;
+  --white: #fbf8f0;
+  --surface: rgba(251, 248, 240, 0.74);
+  --surface-strong: rgba(251, 248, 240, 0.9);
   --shadow: 0 24px 70px rgba(51, 47, 38, 0.16);
+  --soft-shadow: 0 18px 54px rgba(51, 47, 38, 0.11);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -27,11 +30,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    linear-gradient(rgba(42, 43, 38, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(42, 43, 38, 0.035) 1px, transparent 1px),
-    var(--paper);
-  background-size: 18px 18px;
+  background: linear-gradient(180deg, #eee7dc 0%, #e9e1d4 100%);
 }
 
 a {
@@ -52,10 +51,10 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px clamp(18px, 4vw, 54px);
+  padding: 14px clamp(18px, 4vw, 54px);
   border-bottom: 1px solid rgba(87, 83, 71, 0.18);
-  background: rgba(248, 245, 237, 0.88);
-  backdrop-filter: blur(16px);
+  background: rgba(251, 250, 246, 0.82);
+  backdrop-filter: blur(20px) saturate(1.1);
 }
 
 .brand {
@@ -97,7 +96,11 @@ nav {
 .site-tabs {
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 8px clamp(10px, 1.8vw, 22px);
+  gap: 6px;
+  padding: 5px;
+  border: 1px solid rgba(87, 83, 71, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.56);
 }
 
 .language-switch {
@@ -138,14 +141,29 @@ nav a:hover {
 
 .site-tabs a {
   display: inline-flex;
-  min-height: 32px;
+  min-height: 34px;
   align-items: center;
-  border-bottom: 2px solid transparent;
+  padding: 0 12px;
+  border-radius: 999px;
+  transition:
+    background 160ms ease,
+    color 160ms ease;
 }
 
 .site-tabs a.active {
-  border-color: var(--teal);
+  background: var(--ink);
+  box-shadow: 0 6px 18px rgba(32, 34, 31, 0.12);
+  color: var(--white);
+}
+
+.site-tabs a:hover {
   color: var(--ink);
+  background: rgba(255, 253, 248, 0.78);
+}
+
+.site-tabs a.active:hover {
+  color: var(--white);
+  background: var(--ink);
 }
 
 .nav-cta {
@@ -154,15 +172,16 @@ nav a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(440px, 1.18fr);
+  grid-template-columns: minmax(0, 0.88fr) minmax(440px, 1.12fr);
   align-items: center;
   gap: clamp(32px, 5vw, 72px);
-  min-height: calc(100vh - 68px);
-  padding: clamp(52px, 7vw, 94px) clamp(18px, 4vw, 54px) 44px;
+  min-height: min(760px, calc(100vh - 64px));
+  padding: clamp(38px, 5.5vw, 72px) clamp(18px, 4vw, 54px) clamp(42px, 5.5vw, 68px);
 }
 
 .hero-copy {
   max-width: 660px;
+  padding-top: clamp(0px, 1vw, 12px);
 }
 
 .eyebrow {
@@ -212,9 +231,13 @@ p {
   line-height: 1.65;
 }
 
+main {
+  overflow: hidden;
+}
+
 .hero-text {
   max-width: 620px;
-  margin: 26px 0 0;
+  margin: 22px 0 0;
   color: #4c514a;
   font-size: clamp(18px, 2vw, 22px);
 }
@@ -223,7 +246,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 34px;
+  margin-top: 28px;
 }
 
 .button {
@@ -231,10 +254,19 @@ p {
   min-height: 46px;
   align-items: center;
   justify-content: center;
-  padding: 12px 18px;
+  padding: 12px 20px;
   border: 1px solid var(--ink);
   border-radius: 4px;
   font-weight: 850;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(51, 47, 38, 0.12);
 }
 
 .button.primary {
@@ -250,21 +282,31 @@ p {
 .hero-visual {
   overflow: hidden;
   border: 1px solid rgba(44, 44, 39, 0.38);
-  border-radius: 6px;
-  background: var(--white);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.95), rgba(255, 253, 248, 0.82)),
+    var(--white);
   box-shadow: var(--shadow);
+  transform: translateZ(0);
 }
 
-.hero-visual img {
+.hero-visual img,
+.hero-visual video {
   width: 100%;
   height: auto;
   max-height: min(68vh, 760px);
   object-fit: contain;
 }
 
+.hero-visual video {
+  background: var(--white);
+}
+
 .section-band {
-  border-block: 1px solid rgba(87, 83, 71, 0.18);
-  background: rgba(255, 253, 248, 0.68);
+  border-block: 1px solid rgba(87, 83, 71, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.76), rgba(255, 253, 248, 0.9)),
+    rgba(255, 253, 248, 0.68);
 }
 
 .problem,
@@ -278,7 +320,7 @@ p {
 .technical,
 .page-hero,
 .final-callout {
-  padding: clamp(62px, 8vw, 112px) clamp(18px, 4vw, 54px);
+  padding: clamp(48px, 6vw, 82px) clamp(18px, 4vw, 54px);
 }
 
 .page-hero {
@@ -305,7 +347,7 @@ p {
   gap: 32px;
   align-items: end;
   max-width: 1180px;
-  margin: 0 auto 38px;
+  margin: 0 auto 34px;
 }
 
 .section-heading.narrow {
@@ -317,11 +359,9 @@ p {
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
+  gap: 14px;
   max-width: 1180px;
   margin: 0 auto;
-  border: 1px solid var(--line);
-  background: var(--line);
 }
 
 .problem-grid article,
@@ -330,12 +370,15 @@ p {
 .flow-line article,
 .security-list article,
 .fit-card {
-  background: rgba(255, 253, 248, 0.88);
+  background: var(--surface-strong);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.78) inset;
 }
 
 .problem-grid article {
   min-height: 210px;
   padding: 24px;
+  border: 1px solid rgba(203, 195, 177, 0.8);
+  border-radius: 8px;
 }
 
 .problem-grid p,
@@ -348,19 +391,28 @@ p {
   line-height: 1.55;
 }
 
+.problem-grid h3,
+.deployment-grid h3,
+.technical-grid h3,
+.flow-line h3,
+.security-list h3,
+.fit-card h3 {
+  max-width: 95%;
+}
+
 .technical-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
+  gap: 14px;
   max-width: 1180px;
   margin: 0 auto;
-  border: 1px solid var(--line);
-  background: var(--line);
 }
 
 .technical-grid article {
   min-height: 190px;
   padding: 22px;
+  border: 1px solid rgba(203, 195, 177, 0.8);
+  border-radius: 8px;
 }
 
 .deployment-grid {
@@ -376,7 +428,8 @@ p {
   padding: 26px;
   border: 1px solid var(--line);
   border-top: 5px solid var(--teal);
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
 }
 
 .flow-line {
@@ -385,7 +438,7 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   max-width: 1180px;
-  margin: 48px auto 0;
+  margin: 36px auto 0;
 }
 
 .flow-line::before {
@@ -403,7 +456,8 @@ p {
   min-height: 218px;
   padding: 24px;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
 }
 
 .flow-line span {
@@ -437,7 +491,9 @@ p {
   padding: clamp(26px, 4vw, 42px);
   border: 1px solid var(--line);
   border-left: 6px solid var(--orange);
-  background: var(--white);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  box-shadow: var(--soft-shadow);
 }
 
 .ownership-points {
@@ -468,7 +524,8 @@ p {
 .fit-card {
   padding: clamp(24px, 4vw, 34px);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
 }
 
 .fit-card.good {
@@ -514,14 +571,18 @@ p {
 .security-list article {
   padding: 22px;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
 }
 
 .comparison-table {
   max-width: 1120px;
   margin: 42px auto 0;
   border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
   background: rgba(255, 253, 248, 0.85);
+  box-shadow: var(--soft-shadow);
 }
 
 .table-row {
@@ -567,28 +628,28 @@ p {
 
 .final-callout p {
   max-width: 760px;
-  margin: 24px auto 30px;
+  margin: 20px auto 26px;
 }
 
 .contact-hero {
-  padding-bottom: clamp(34px, 5vw, 62px);
+  padding-bottom: clamp(28px, 4vw, 48px);
 }
 
 .contact-section {
-  padding-top: clamp(34px, 5vw, 62px);
+  padding-top: clamp(28px, 4vw, 48px);
 }
 
 .team-hero {
-  padding-bottom: clamp(34px, 5vw, 62px);
+  padding-bottom: clamp(28px, 4vw, 48px);
 }
 
 .team-section {
-  padding-top: clamp(34px, 5vw, 62px);
+  padding-top: clamp(28px, 4vw, 48px);
 }
 
 .team-section-heading {
   max-width: 940px;
-  margin: 0 auto 34px;
+  margin: 0 auto 28px;
 }
 
 .founder-grid {
@@ -604,8 +665,9 @@ p {
   grid-template-columns: minmax(260px, 0.44fr) minmax(0, 1fr);
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--white);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  box-shadow: var(--soft-shadow);
 }
 
 .founder-photo-frame {
@@ -632,7 +694,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: clamp(24px, 4vw, 34px);
+  padding: clamp(28px, 4vw, 44px);
 }
 
 .founder-copy h2 {
@@ -640,13 +702,14 @@ p {
 }
 
 .founder-copy p:not(.eyebrow) {
+  max-width: 760px;
   margin: 22px 0 0;
   font-size: 16px;
   line-height: 1.6;
 }
 
 .team-note {
-  padding-top: clamp(58px, 7vw, 92px);
+  padding-top: clamp(44px, 5vw, 68px);
 }
 
 .contact-card {
@@ -657,8 +720,9 @@ p {
   padding: clamp(24px, 4vw, 38px);
   border: 1px solid var(--line);
   border-left: 6px solid var(--teal);
-  border-radius: 6px;
-  background: var(--white);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  box-shadow: var(--soft-shadow);
 }
 
 .contact-field span,
@@ -716,6 +780,7 @@ p {
 
   .hero {
     min-height: auto;
+    padding-top: 40px;
   }
 
   .hero-visual {
@@ -737,24 +802,47 @@ p {
 @media (max-width: 720px) {
   .site-header {
     position: static;
-    align-items: flex-start;
+    gap: 16px;
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .header-actions {
     width: 100%;
-    align-items: flex-start;
+    min-width: 0;
+    align-items: center;
     justify-content: space-between;
     gap: 14px;
   }
 
-  nav {
-    flex-wrap: wrap;
+  .site-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
     justify-content: flex-start;
-    gap: 10px 16px;
+    max-width: 100%;
+    scrollbar-width: none;
+  }
+
+  .site-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .hero {
-    padding-top: 28px;
+    padding-top: 30px;
+  }
+
+  h1 {
+    font-size: clamp(38px, 13vw, 52px);
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: clamp(27px, 9vw, 36px);
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.58;
   }
 
   .hero-actions {
@@ -780,6 +868,10 @@ p {
     min-height: 260px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .founder-copy {
+    padding: 24px;
   }
 
   .table-row,
