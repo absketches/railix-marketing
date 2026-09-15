@@ -26,6 +26,14 @@
       }
     });
 
+    document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+      const message = getMessage(messages, element.dataset.i18nAlt);
+
+      if (typeof message === "string") {
+        element.setAttribute("alt", message);
+      }
+    });
+
     const page = document.body.dataset.page;
     const title = page && getMessage(messages, `${page}.title`);
     const description = page && getMessage(messages, `${page}.meta`);

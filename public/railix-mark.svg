@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 256" role="img" aria-labelledby="title desc">
+  <title id="title">Railix mark</title>
+  <desc id="desc">Two synchronized code pipes feeding an execution operator and output artifact.</desc>
+  <rect width="512" height="256" fill="#000"/>
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Business and operational rails -->
+    <path d="M104 48V208M206 48V208" stroke-width="30"/>
+    <!-- Synchronization bridge -->
+    <path d="M126 112H184" stroke-width="12"/>
+    <!-- Executable steps -->
+    <rect x="79" y="87" width="50" height="50" rx="8" fill="#000" stroke-width="14"/>
+    <rect x="181" y="119" width="50" height="50" rx="8" fill="#000" stroke-width="14"/>
+    <!-- Pipeline execution operator -->
+    <path d="M292 66L374 128L292 190" stroke-width="30"/>
+  </g>
+  <!-- Generated artifact -->
+  <rect x="421" y="108" width="40" height="40" rx="7" fill="#fff"/>
+</svg>

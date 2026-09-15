@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lerne das Railix Team kennen. Railix wird aktuell von zwei Gründern aufgebaut." />
+    <title>Railix | Team</title>
+    <link rel="icon" href="public/railix-favicon.ico" sizes="any" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="messages/de.js" defer></script>
+    <script src="messages/en.js" defer></script>
+    <script src="i18n.js" defer></script>
+  </head>
+  <body data-page="team">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Railix Startseite"><span class="brand-mark"><img src="public/railix-mark.svg" alt="" /></span><span>Railix</span></a>
+      <div class="header-actions">
+        <nav class="site-tabs" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav.overview">Überblick</a>
+          <a href="model.html" data-i18n="nav.model">Modell</a>
+          <a href="run-anywhere.html" data-i18n="nav.runAnywhere">Überall ausführen</a>
+          <a href="use-cases.html" data-i18n="nav.useCases">Anwendungsfälle</a>
+          <a href="security.html" data-i18n="nav.security">Sicherheit</a>
+          <a class="active" href="team.html" data-i18n="nav.team">Team</a>
+        </nav>
+        <div class="language-switch" aria-label="Sprache wählen">
+          <button class="active" type="button" data-language-switch="de" aria-pressed="true">DE</button>
+          <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero team-hero">
+        <p class="eyebrow" data-i18n="team.eyebrow">Railix Team</p>
+        <h1 data-i18n="team.h1">Gebaut von Gründern, die Software verständlicher machen wollen.</h1>
+        <p data-i18n="team.intro">Railix wird aktuell von zwei Gründern aufgebaut. Wir verbinden Produktdenken, Engineering und Betrieb, damit Software nicht in getrennten Tools, Annahmen und Laufzeitgrenzen zerfällt.</p>
+      </section>
+
+      <section class="team-section section-band">
+        <div class="team-section-heading">
+          <p class="eyebrow" data-i18n="team.foundersEyebrow">Die Gründer</p>
+          <h2 data-i18n="team.foundersTitle">Die Menschen hinter Railix.</h2>
+        </div>
+        <div class="founder-grid">
+          <article class="founder-card">
+            <div class="founder-photo-frame">
+              <img src="public/yuna.webp" alt="Porträt von Yuna Morgenstern" data-i18n-alt="team.founderOneAlt" />
+            </div>
+            <div class="founder-copy">
+              <p class="eyebrow" data-i18n="team.founderOneRole">Mitgründerin</p>
+              <h2 data-i18n="team.founderOneName">Yuna Morgenstern</h2>
+              <p data-i18n="team.founderOneText">Unsere Mitgründerin Yuna ist eine außergewöhnliche Engineerin für Automatisierung, Systemarchitektur und Developer Tooling. Ihre Open-Source-Arbeit, vom eventgetriebenen Java-Framework Nano über eingebettete NATS-Testserver bis zum GitHub Workflow Plugin für JetBrains IDEs, zeigt genau den praktischen Engineering-Anspruch, auf dem Railix aufbaut.</p>
+              <p data-i18n="team.founderOneText2">Bei Railix bringt Yuna diese Stärke in den Aufbau komplexer technischer Systeme ein, die für Entwickler und Maintainer verständlich, testbar und zuverlässig werden. Ihre Arbeit zeigt nicht nur technische Tiefe, sondern auch die Fähigkeit, Wissen klar weiterzugeben – durch Open-Source-Dokumentation, praktische Coding Challenges und Werkzeuge, die Engineers im Alltag besseres Feedback geben.</p>
+            </div>
+          </article>
+
+          <article class="founder-card">
+            <div class="founder-photo-frame">
+              <img src="public/abhi.webp" alt="Porträt von Abhiroop Basu" data-i18n-alt="team.founderTwoAlt" />
+            </div>
+            <div class="founder-copy">
+              <p class="eyebrow" data-i18n="team.founderTwoRole">Mitgründer</p>
+              <h2 data-i18n="team.founderTwoName">Abhiroop Basu</h2>
+              <p data-i18n="team.founderTwoText">Unser Mitgründer Abhiroop arbeitet an der Schnittstelle von Backend-Systemen, Produktdenken und operativer Verantwortung. Seine Arbeit reicht von SaaS über Payments und Finanzinfrastruktur bis zu Enterprise-Plattformen, immer mit dem Fokus, komplexe Systeme verständlich, zuverlässig und nutzbar zu machen.</p>
+              <p data-i18n="team.founderTwoText2">Bei Railix bringt Abhiroop diese Erfahrung in die zentrale Frage des Produkts ein: Wie kann Software so modelliert werden, dass Teams sie verstehen, prüfen und nahtlos betreiben können? Als früherer SaaS-Mitgründer und Open-Source-Builder hat er Produkte von null auf aufgebaut, technische Entscheidungen über Teams hinweg geführt und Werkzeuge geschaffen, die komplexe Systeme sichtbarer, zuverlässiger und wartbarer machen.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="two-column team-note">
+        <div>
+          <p class="eyebrow" data-i18n="team.workingEyebrow">Wie wir arbeiten</p>
+          <h2 data-i18n="team.workingTitle">Wir bauen dort, wo Produkt, Engineering und Betrieb zusammenkommen.</h2>
+        </div>
+        <div class="stacked-copy">
+          <p data-i18n="team.workingText1">Unser Ausgangspunkt ist die Reibung, die entsteht, wenn Produktverhalten, Tests, Deployment, Secrets und Betrieb in unterschiedliche Systeme auseinanderlaufen.</p>
+          <p data-i18n="team.workingText2">Railix soll diese Teile wieder als ein verständliches, ausführbares Produktmodell zusammenbringen und trotzdem die Kontrolle über die spätere Laufzeit beim Team lassen.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>Railix</span><span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span></footer>
+  </body>
+</html>

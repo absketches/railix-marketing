@@ -68,14 +68,14 @@ img {
 
 .brand-mark {
   display: grid;
-  width: 28px;
+  width: 36px;
   height: 28px;
   place-items: center;
-  border: 1px solid var(--ink);
-  background: var(--ink);
-  color: var(--white);
-  font-size: 15px;
-  line-height: 1;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: auto;
 }
 
 nav {
@@ -274,6 +274,7 @@ p {
 .fit,
 .comparison,
 .contact-section,
+.team-section,
 .technical,
 .page-hero,
 .final-callout {
@@ -577,6 +578,77 @@ p {
   padding-top: clamp(34px, 5vw, 62px);
 }
 
+.team-hero {
+  padding-bottom: clamp(34px, 5vw, 62px);
+}
+
+.team-section {
+  padding-top: clamp(34px, 5vw, 62px);
+}
+
+.team-section-heading {
+  max-width: 940px;
+  margin: 0 auto 34px;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.founder-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.44fr) minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--white);
+}
+
+.founder-photo-frame {
+  display: grid;
+  min-height: 100%;
+  place-items: center;
+  border-right: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(11, 117, 128, 0.15), rgba(217, 95, 51, 0.16)),
+    rgba(248, 245, 237, 0.82);
+}
+
+.founder-photo-frame img {
+  width: min(72%, 260px);
+  aspect-ratio: 1;
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 0 18px 46px rgba(51, 47, 38, 0.22);
+  object-fit: cover;
+  object-position: center;
+}
+
+.founder-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: clamp(24px, 4vw, 34px);
+}
+
+.founder-copy h2 {
+  font-size: clamp(28px, 3vw, 38px);
+}
+
+.founder-copy p:not(.eyebrow) {
+  margin: 22px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.team-note {
+  padding-top: clamp(58px, 7vw, 92px);
+}
+
 .contact-card {
   display: grid;
   gap: 18px;
@@ -696,10 +768,18 @@ p {
 
   .problem-grid,
   .deployment-grid,
+  .founder-grid,
+  .founder-card,
   .fit-columns,
   .technical-grid,
   .flow-line {
     grid-template-columns: 1fr;
+  }
+
+  .founder-photo-frame {
+    min-height: 260px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .table-row,
