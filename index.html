@@ -39,7 +39,12 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero hero-with-video">
+        <div class="hero-background" aria-hidden="true">
+          <video autoplay muted loop playsinline preload="metadata" poster="public/railix-hero-background-poster.jpg">
+            <source src="public/railix-hero-background.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="hero-copy">
           <p class="eyebrow" data-i18n="home.eyebrow">Software ohne Plattformfalle</p>
           <h1 data-i18n="home.h1">Software als ein ausführbares Modell erstellen.</h1>
@@ -49,12 +54,6 @@
           <div class="hero-actions">
             <a class="button secondary" href="model.html" data-i18n="home.cta">Modell ansehen</a>
           </div>
-        </div>
-
-        <div class="hero-visual" aria-label="Vorschau der Railix Workflow-Arbeitsfläche">
-          <video autoplay muted loop playsinline preload="metadata" poster="public/railix-workflow.webp">
-            <source src="public/railix-rec-loop.mp4" type="video/mp4" />
-          </video>
         </div>
       </section>
 
