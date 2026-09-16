@@ -93,6 +93,10 @@ nav {
   gap: 18px;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 .site-tabs {
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -893,29 +897,92 @@ main {
 @media (max-width: 720px) {
   .site-header {
     position: static;
-    gap: 16px;
-    align-items: stretch;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 12px 14px;
+    align-items: center;
+    padding: 12px 14px 10px;
   }
 
   .header-actions {
-    width: 100%;
+    display: contents;
+  }
+
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
     min-width: 0;
+  }
+
+  .language-switch {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .menu-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 38px;
     align-items: center;
-    justify-content: space-between;
-    gap: 14px;
+    justify-content: center;
+    padding: 0 13px;
+    border: 1px solid rgba(87, 83, 71, 0.28);
+    border-radius: 6px;
+    background: rgba(255, 253, 248, 0.82);
+    color: var(--ink);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 850;
+    cursor: pointer;
+  }
+
+  .site-header.menu-ready .menu-toggle {
+    display: inline-flex;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle[aria-expanded="true"] {
+    background: var(--ink);
+    color: var(--white);
+  }
+
+  .menu-toggle:focus-visible {
+    outline: 2px solid rgba(11, 117, 128, 0.35);
+    outline-offset: 2px;
   }
 
   .site-tabs {
-    overflow-x: auto;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    overflow: hidden;
+    flex-direction: column;
     flex-wrap: nowrap;
+    align-items: stretch;
     justify-content: flex-start;
     max-width: 100%;
-    scrollbar-width: none;
+    padding: 6px;
+    border-radius: 8px;
+    background: rgba(255, 253, 248, 0.72);
+    box-shadow: 0 12px 32px rgba(51, 47, 38, 0.12);
   }
 
-  .site-tabs::-webkit-scrollbar {
+  .site-header.menu-ready .site-tabs {
     display: none;
+  }
+
+  .site-header.menu-ready.menu-open .site-tabs {
+    display: flex;
+  }
+
+  .site-tabs a {
+    width: 100%;
+    min-height: 38px;
+    justify-content: flex-start;
+    padding: 0 12px;
+    border-radius: 6px;
+    font-size: 13px;
   }
 
   .hero {

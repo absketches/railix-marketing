@@ -18,7 +18,8 @@
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="Railix Startseite"><span class="brand-mark"><img src="public/railix-mark.svg" alt="" /></span><span>Railix</span></a>
       <div class="header-actions">
-        <nav class="site-tabs" aria-label="Hauptnavigation">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-i18n="nav.menu">Menü</button>
+        <nav id="site-navigation" class="site-tabs" aria-label="Hauptnavigation">
           <a href="index.html" data-i18n="nav.overview">Überblick</a>
           <a class="active" href="model.html" data-i18n="nav.model">Modell</a>
           <a href="run-anywhere.html" data-i18n="nav.runAnywhere">Überall ausführen</a>
@@ -40,7 +41,7 @@
         <div>
           <p class="eyebrow">Railix Creator</p>
           <h1 data-i18n="model.h1">Ein Produktmodell, das Menschen und KI-Systeme verstehen und auswerten können.</h1>
-          <p data-i18n="model.intro">Railix Creator macht Software sichtbar und ausführbar. Teams sehen, was das Produkt tut, wie es geprüft wird, wo es läuft, welche Secrets es braucht und wie der Produktionsbetrieb gehandhabt werden soll.</p>
+          <p data-i18n="model.intro">Railix Creator macht Software sichtbar und ausführbar. Teams sehen, was das Produkt tut, wie es geprüft wird, wo es läuft, welche Secrets es braucht und wie der Produktionsbetrieb gehandhabt werden soll. Modelländerungen kompilieren im Hintergrund und geben Teams das Gefühl einer Live-Entwicklungsumgebung mit fast keiner Wartezeit beim Deployment.</p>
         </div>
         <div class="hero-visual model-hero-video" aria-label="Vorschau der Railix Workflow-Arbeitsfläche">
           <video autoplay muted loop playsinline preload="metadata" poster="public/railix-workflow.webp">

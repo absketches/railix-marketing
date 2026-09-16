@@ -3,6 +3,9 @@
   const savedLanguage = localStorage.getItem("railix-language");
   const initialLanguage = savedLanguage === "en" ? "en" : fallbackLanguage;
   const languageControls = Array.from(document.querySelectorAll("[data-language-switch]"));
+  const siteHeader = document.querySelector(".site-header");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const siteNavigation = document.querySelector(".site-tabs");
 
   function getMessage(messages, key) {
     return key.split(".").reduce((value, part) => value && value[part], messages);
@@ -56,6 +59,31 @@
       setLanguage(control.value);
     });
   });
+
+  if (siteHeader && menuToggle && siteNavigation) {
+    siteHeader.classList.add("menu-ready");
+
+    function setMenuOpen(isOpen) {
+      siteHeader.classList.toggle("menu-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    }
+
+    menuToggle.addEventListener("click", () => {
+      setMenuOpen(!siteHeader.classList.contains("menu-open"));
+    });
+
+    siteNavigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        setMenuOpen(false);
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    });
+  }
 
   setLanguage(initialLanguage);
 })();
