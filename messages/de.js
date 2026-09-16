@@ -8,7 +8,6 @@ window.RailixMessages.de = {
     security: "Sicherheit",
     team: "Team",
     contact: "Kontakt",
-    menu: "Menü",
   },
   footer: {
     tagline: "Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.",

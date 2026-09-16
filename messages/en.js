@@ -8,7 +8,6 @@ window.RailixMessages.en = {
     security: "Security",
     team: "Team",
     contact: "Contact",
-    menu: "Menu",
   },
   footer: {
     tagline: "Executable software models. Portable compiled applications.",

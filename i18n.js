@@ -6,6 +6,17 @@
   const siteHeader = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
   const siteNavigation = document.querySelector(".site-tabs");
+  const activeNavigationLink = siteNavigation && siteNavigation.querySelector("a.active");
+  const mobileNavigationQuery = window.matchMedia("(max-width: 720px)");
+  const navigationPageKeys = {
+    home: "overview",
+    model: "model",
+    run: "runAnywhere",
+    useCases: "useCases",
+    security: "security",
+    team: "team",
+    contact: "contact",
+  };
 
   function getMessage(messages, key) {
     return key.split(".").reduce((value, part) => value && value[part], messages);
@@ -52,6 +63,17 @@
     languageControls.forEach((control) => {
       control.value = language;
     });
+
+    if (menuToggle) {
+      const navigationKey = page && navigationPageKeys[page];
+      const fallbackLabel = navigationKey && getMessage(messages, `nav.${navigationKey}`);
+      const menuLabel = activeNavigationLink ? activeNavigationLink.textContent : fallbackLabel;
+
+      if (menuLabel) {
+        menuToggle.textContent = menuLabel;
+        menuToggle.setAttribute("aria-label", `Navigation: ${menuLabel}`);
+      }
+    }
   }
 
   languageControls.forEach((control) => {
@@ -60,12 +82,24 @@
     });
   });
 
+  setLanguage(initialLanguage);
+
   if (siteHeader && menuToggle && siteNavigation) {
     siteHeader.classList.add("menu-ready");
 
     function setMenuOpen(isOpen) {
       siteHeader.classList.toggle("menu-open", isOpen);
       menuToggle.setAttribute("aria-expanded", String(isOpen));
+    }
+
+    function syncMenuVisibility() {
+      const isMobile = mobileNavigationQuery.matches;
+
+      menuToggle.hidden = !isMobile;
+
+      if (!isMobile) {
+        setMenuOpen(false);
+      }
     }
 
     menuToggle.addEventListener("click", () => {
@@ -83,7 +117,8 @@
         setMenuOpen(false);
       }
     });
-  }
 
-  setLanguage(initialLanguage);
+    mobileNavigationQuery.addEventListener("change", syncMenuVisibility);
+    syncMenuVisibility();
+  }
 })();
