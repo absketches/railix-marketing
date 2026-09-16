@@ -24,8 +24,10 @@
           <a href="team.html" data-i18n="nav.team">Team</a>
         </nav>
         <div class="language-switch" aria-label="Sprache wählen">
-          <button class="active" type="button" data-language-switch="de" aria-pressed="true">DE</button>
-          <button type="button" data-language-switch="en" aria-pressed="false">EN</button>
+          <select data-language-switch aria-label="Sprache wählen">
+            <option value="de">🇩🇪</option>
+            <option value="en">🇬🇧</option>
+          </select>
         </div>
       </div>
     </header>
@@ -74,6 +76,6 @@
       </section>
     </main>
 
-    <footer class="site-footer"><span>Railix</span><span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span></footer>
+    <footer class="site-footer"><span>Railix</span><span class="footer-copy"><span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span><span data-i18n="footer.copyright">© 2026 Railix. Alle Rechte vorbehalten.</span></span></footer>
   </body>
 </html>

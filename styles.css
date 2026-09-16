@@ -1,6 +1,6 @@
 :root {
   color-scheme: light;
-  --paper: #eee7dc;
+  --paper: #f5f7f7;
   --ink: #20221f;
   --muted: #696d65;
   --line: #cbc3b1;
@@ -30,7 +30,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: linear-gradient(180deg, #eee7dc 0%, #e9e1d4 100%);
+  background: linear-gradient(180deg, #eef1ee 0%, #dfe5e2 100%);
 }
 
 a {
@@ -107,28 +107,35 @@ nav {
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  padding: 3px;
-  border: 1px solid rgba(87, 83, 71, 0.28);
-  border-radius: 999px;
-  background: rgba(255, 253, 248, 0.76);
+  position: relative;
 }
 
-.language-switch button {
-  min-width: 38px;
-  min-height: 28px;
-  border: 0;
-  border-radius: 999px;
-  background: transparent;
-  color: var(--muted);
+.language-switch select {
+  min-width: 58px;
+  min-height: 38px;
+  padding: 0 24px 0 9px;
+  border: 1px solid rgba(87, 83, 71, 0.28);
+  border-radius: 6px;
+  appearance: none;
+  background:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%) right 17px center / 5px 5px no-repeat,
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%) right 12px center / 5px 5px no-repeat,
+    rgba(255, 253, 248, 0.76);
+  color: var(--ink);
   font: inherit;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 900;
   cursor: pointer;
 }
 
-.language-switch button.active {
-  background: var(--ink);
-  color: var(--white);
+.language-switch select:hover {
+  border-color: rgba(87, 83, 71, 0.42);
+  background-color: rgba(255, 253, 248, 0.92);
+}
+
+.language-switch select:focus-visible {
+  outline: 2px solid rgba(11, 117, 128, 0.35);
+  outline-offset: 2px;
 }
 
 nav a {
@@ -769,6 +776,13 @@ main {
   color: var(--muted);
   font-size: 14px;
   font-weight: 700;
+}
+
+.footer-copy {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 18px;
 }
 
 @media (max-width: 980px) {

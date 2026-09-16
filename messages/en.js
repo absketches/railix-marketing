@@ -11,6 +11,7 @@ window.RailixMessages.en = {
   },
   footer: {
     tagline: "Executable software models. Portable compiled applications.",
+    copyright: "© 2026 Railix. All rights reserved.",
   },
   home: {
     title: "Railix | Software Products From One Executable Model",

@@ -2,7 +2,7 @@
   const fallbackLanguage = "de";
   const savedLanguage = localStorage.getItem("railix-language");
   const initialLanguage = savedLanguage === "en" ? "en" : fallbackLanguage;
-  const buttons = Array.from(document.querySelectorAll("[data-language-switch]"));
+  const languageControls = Array.from(document.querySelectorAll("[data-language-switch]"));
 
   function getMessage(messages, key) {
     return key.split(".").reduce((value, part) => value && value[part], messages);
@@ -46,16 +46,14 @@
       document.querySelector('meta[name="description"]')?.setAttribute("content", description);
     }
 
-    buttons.forEach((button) => {
-      const isActive = button.dataset.languageSwitch === language;
-      button.classList.toggle("active", isActive);
-      button.setAttribute("aria-pressed", String(isActive));
+    languageControls.forEach((control) => {
+      control.value = language;
     });
   }
 
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      setLanguage(button.dataset.languageSwitch);
+  languageControls.forEach((control) => {
+    control.addEventListener("change", () => {
+      setLanguage(control.value);
     });
   });
 

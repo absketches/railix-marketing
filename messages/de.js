@@ -11,6 +11,7 @@ window.RailixMessages.de = {
   },
   footer: {
     tagline: "Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.",
+    copyright: "© 2026 Railix. Alle Rechte vorbehalten.",
   },
   home: {
     title: "Railix | Softwareprodukte aus einem ausführbaren Modell",
