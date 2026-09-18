@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Railix hilft Teams, Softwareprodukte aus einem visuellen ausführbaren Modell zu erstellen, zu prüfen, zu kompilieren, bereitzustellen und zu betreiben."
+      content="Railix baut auf eine Zukunft hin, in der Teams Softwareprodukte aus einem visuellen ausführbaren Modell erstellen, prüfen, kompilieren, bereitstellen und betreiben können."
     />
     <link rel="canonical" href="https://railix.mitbauen.space/" />
     <meta property="og:type" content="website" />
@@ -14,10 +14,10 @@
     <meta property="og:title" content="Railix | Softwareprodukte aus einem ausführbaren Modell" />
     <meta
       property="og:description"
-      content="Railix hilft Teams, Softwareprodukte aus einem visuellen ausführbaren Modell zu erstellen, zu prüfen, zu kompilieren, bereitzustellen und zu betreiben."
+      content="Railix baut auf eine Zukunft hin, in der Teams Softwareprodukte aus einem visuellen ausführbaren Modell erstellen, prüfen, kompilieren, bereitstellen und betreiben können."
     />
-    <meta property="og:image" content="https://railix.mitbauen.space/public/railix-hero-background-poster.jpg" />
-    <meta property="og:image:secure_url" content="https://railix.mitbauen.space/public/railix-hero-background-poster.jpg" />
+    <meta property="og:image" content="https://railix.mitbauen.space/public/railix-vision-de-poster.jpg" />
+    <meta property="og:image:secure_url" content="https://railix.mitbauen.space/public/railix-vision-de-poster.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1920" />
     <meta property="og:image:height" content="1080" />
@@ -26,9 +26,9 @@
     <meta name="twitter:title" content="Railix | Softwareprodukte aus einem ausführbaren Modell" />
     <meta
       name="twitter:description"
-      content="Railix hilft Teams, Softwareprodukte aus einem visuellen ausführbaren Modell zu erstellen, zu prüfen, zu kompilieren, bereitzustellen und zu betreiben."
+      content="Railix baut auf eine Zukunft hin, in der Teams Softwareprodukte aus einem visuellen ausführbaren Modell erstellen, prüfen, kompilieren, bereitstellen und betreiben können."
     />
-    <meta name="twitter:image" content="https://railix.mitbauen.space/public/railix-hero-background-poster.jpg" />
+    <meta name="twitter:image" content="https://railix.mitbauen.space/public/railix-vision-de-poster.jpg" />
     <title>Railix | Softwareprodukte aus einem ausführbaren Modell</title>
     <link rel="icon" href="public/railix-favicon.ico" sizes="any" />
     <link rel="stylesheet" href="styles.css" />
@@ -62,22 +62,25 @@
     </header>
 
     <main>
-      <section class="hero hero-with-video">
-        <div class="hero-background" aria-hidden="true">
-          <video autoplay muted loop playsinline preload="metadata" poster="public/railix-hero-background-poster.jpg">
-            <source src="public/railix-hero-background.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="hero-copy">
-          <p class="eyebrow" data-i18n="home.eyebrow">Software ohne Plattformfalle</p>
-          <h1 data-i18n="home.h1">Software als ein ausführbares Modell erstellen.</h1>
-          <p class="hero-text" data-i18n="home.intro">
-            Mit Railix entwerfen Teams Verhalten, Prüfung, Deployment, Sicherheit und Betrieb eines Produkts in einem visuellen System und kompilieren daraus eine schnelle, eigenständige Anwendung, die überall laufen kann. Modelländerungen kompilieren im Hintergrund und geben Teams das Gefühl einer Live-Entwicklungsumgebung mit fast keiner Wartezeit beim Deployment.
-          </p>
-          <div class="hero-actions">
-            <a class="button secondary" href="model.html" data-i18n="home.cta">Modell ansehen</a>
-          </div>
-        </div>
+      <section class="vision-hero" aria-label="Railix Vision Video">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="public/railix-vision-de-poster.jpg"
+          aria-label="Railix Vision Video"
+          data-focus-video
+          data-localized-video
+          data-video-src-de="public/railix-vision-de.mp4"
+          data-video-poster-de="public/railix-vision-de-poster.jpg"
+          data-video-src-en="public/railix-vision.mp4"
+          data-video-poster-en="public/railix-vision-poster.jpg"
+        ></video>
+        <button class="video-audio-toggle" type="button" aria-label="Muted" aria-pressed="false" data-audio-toggle-button data-muted-label="Muted" data-unmuted-label="Sound on">
+          <span class="sound-icon" aria-hidden="true"></span>
+        </button>
       </section>
 
       <section class="problem section-band">
@@ -107,39 +110,39 @@
 
       <section class="model">
         <div class="section-heading narrow">
-          <p class="eyebrow" data-i18n="home.shiftEyebrow">Der Railix-Wechsel</p>
-          <h2 data-i18n="home.shiftTitle">Das Produkt einmal modellieren. Überall nutzen.</h2>
+          <p class="eyebrow" data-i18n="home.shiftEyebrow">Die Railix-Richtung</p>
+          <h2 data-i18n="home.shiftTitle">Das Produkt einmal modellieren. Überall nutzbar machen.</h2>
         </div>
 
         <div class="flow-line" aria-label="Railix Prozess">
           <article>
             <span>01</span>
             <h3 data-i18n="home.designTitle">Entwerfen</h3>
-            <p data-i18n="home.designText">Baue das Produkt aus visuellen Flows und Steps, die echtes Verhalten beschreiben.</p>
+            <p data-i18n="home.designText">Beschreibe das Produkt mit visuellen Flows und Steps, die echtes Verhalten erfassen.</p>
           </article>
           <article>
             <span>02</span>
             <h3 data-i18n="home.verifyTitle">Prüfen</h3>
-            <p data-i18n="home.verifyText">Beispiele werden zu lebenden Spezifikationen und zum Freigabekriterium, bevor etwas ausgeliefert wird.</p>
+            <p data-i18n="home.verifyText">Beispiele sollen zu lebenden Spezifikationen und zum Freigabekriterium werden, bevor etwas ausgeliefert wird.</p>
           </article>
           <article>
             <span>03</span>
             <h3 data-i18n="home.compileTitle">Kompilieren</h3>
-            <p data-i18n="home.compileText">Gültige Modelle werden zu unveränderlichen eigenständigen Artefakten kompiliert.</p>
+            <p data-i18n="home.compileText">Gültige Modelle sollen zu portablen eigenständigen Artefakten kompiliert werden.</p>
           </article>
           <article>
             <span>04</span>
             <h3 data-i18n="home.operateTitle">Betreiben</h3>
-            <p data-i18n="home.operateText">Dieselbe Quelle der Wahrheit führt Deployment, Support, Audit und Einblick in die Produktion.</p>
+            <p data-i18n="home.operateText">Dieselbe Quelle der Wahrheit soll Deployment, Support, Audit und den Einblick in die Produktion führen.</p>
           </article>
         </div>
       </section>
 
       <section class="final-callout">
         <p class="eyebrow" data-i18n="home.finalEyebrow">Ein Modell. Ein Artefakt. Deine Infrastruktur.</p>
-        <h2 data-i18n="home.finalTitle">Liefere Software aus, die verständlich bleibt, auch nachdem sie den Builder verlassen hat.</h2>
+        <h2 data-i18n="home.finalTitle">Auf Software hinarbeiten, die verständlich bleibt, auch nachdem sie den Builder verlassen hat.</h2>
         <p data-i18n="home.finalText">
-          Railix ist für Teams, die Softwareerstellung, Prüfung, Deployment und Betrieb aus derselben Quelle ableiten wollen, ohne die Kontrolle darüber aufzugeben, wo die fertige Anwendung läuft.
+          Railix ist für Teams, die Softwareerstellung, Prüfung, Deployment und Betrieb aus derselben Quelle ableiten wollen, ohne die Kontrolle darüber aufzugeben, wo die fertige Anwendung laufen soll.
         </p>
         <a class="button primary" href="use-cases.html" data-i18n="home.finalCta">Einsatzbereiche entdecken</a>
       </section>
@@ -147,7 +150,7 @@
 
     <footer class="site-footer">
       <span>Railix</span>
-      <span class="footer-copy"><span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span><span data-i18n="footer.copyright">© 2026 Railix. Alle Rechte vorbehalten.</span></span>
+      <span class="footer-copy"><span data-i18n="footer.tagline">Eine Vision für ausführbare Softwaremodelle und portable kompilierte Anwendungen.</span><span data-i18n="footer.copyright">© 2026 Railix. Alle Rechte vorbehalten.</span></span>
     </footer>
   </body>
 </html>

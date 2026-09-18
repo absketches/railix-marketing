@@ -11,10 +11,12 @@ Use real Railix visuals. Avoid generic abstract decoration when a product/model 
 
 Current important files:
 
-- `public/railix-hero-background.mp4` - homepage background video.
-- `public/railix-hero-background-poster.jpg` - homepage poster and social preview image.
-- `public/railix-rec-loop.mp4` - model page Creator loop.
-- `public/railix-workflow.webp` - model loop poster.
+- `public/railix-vision.mp4` - English overview hero vision video with audio track.
+- `public/railix-vision-de.mp4` - German overview hero vision video with audio track.
+- `public/railix-vision-poster.jpg` - English overview hero poster and social preview image.
+- `public/railix-vision-de-poster.jpg` - German overview hero poster and social preview image.
+- `public/railix-hero-background.mp4` - model page background video.
+- `public/railix-hero-background-poster.jpg` - model page background poster.
 - `public/railix-mark.svg` and `public/railix-favicon.ico` - brand marks.
 
 ## Edit Media

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Railix Creator macht Softwareprodukte zu einem visuellen ausführbaren Modell, das Teams und KI-Systeme verstehen und auswerten können."
+      content="Railix Creator wird rund um ein visuelles ausführbares Modell gebaut, das Teams und KI-Systeme verstehen und auswerten können."
     />
     <title>Railix | Das Modell</title>
     <link rel="icon" href="public/railix-favicon.ico" sizes="any" />
@@ -37,40 +37,42 @@
     </header>
 
     <main>
-      <section class="page-hero model-hero">
-        <div>
-          <p class="eyebrow">Railix Creator</p>
-          <h1 data-i18n="model.h1">Ein Produktmodell, das Menschen und KI-Systeme verstehen und auswerten können.</h1>
-          <p data-i18n="model.intro">Railix Creator macht Software sichtbar und ausführbar. Teams sehen, was das Produkt tut, wie es geprüft wird, wo es läuft, welche Secrets es braucht und wie der Produktionsbetrieb gehandhabt werden soll. Modelländerungen kompilieren im Hintergrund und geben Teams das Gefühl einer Live-Entwicklungsumgebung mit fast keiner Wartezeit beim Deployment.</p>
-        </div>
-        <div class="hero-visual model-hero-video" aria-label="Vorschau der Railix Workflow-Arbeitsfläche">
-          <video autoplay muted loop playsinline preload="metadata" poster="public/railix-workflow.webp">
-            <source src="public/railix-rec-loop.mp4" type="video/mp4" />
+      <section class="hero hero-with-video">
+        <div class="hero-background" aria-hidden="true">
+          <video autoplay muted loop playsinline preload="metadata" poster="public/railix-hero-background-poster.jpg">
+            <source src="public/railix-hero-background.mp4" type="video/mp4" />
           </video>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="home.eyebrow">Software ohne Plattformfalle</p>
+          <h1 data-i18n="home.h1">Eine Vision für Software als ausführbares Modell.</h1>
+          <p class="hero-text" data-i18n="home.intro">
+            Railix baut auf eine Zukunft hin, in der Teams Softwareprodukte aus einem visuellen ausführbaren Modell erstellen, prüfen, kompilieren, bereitstellen und betreiben können. Ziel ist eine Entwicklungsumgebung, in der Modelländerungen im Hintergrund kompilieren und Software sich wie eine Live-Entwicklungsumgebung anfühlt.
+          </p>
         </div>
       </section>
 
       <section class="two-column section-band">
         <div>
           <p class="eyebrow" data-i18n="model.sharedEyebrow">Ein gemeinsames Modell</p>
-          <h2 data-i18n="model.sharedTitle">Ersetze getrennte Diagramme, YAML-Bestände, Testannahmen und ungeschriebenes Betriebswissen.</h2>
+          <h2 data-i18n="model.sharedTitle">Ziel ist, getrennte Diagramme, YAML-Konfigurationen, Testannahmen und ungeschriebenes Betriebswissen zu ersetzen.</h2>
         </div>
         <div class="stacked-copy">
-          <p data-i18n="model.sharedText1">Entwickler behalten Kontrolle. Produktteams bekommen Klarheit. Support bekommt Betriebskontext. Auditoren bekommen ein nachvollziehbares Modell. KI-Systeme bekommen eine strukturierte Quelle der Wahrheit statt verstreuter Dateien.</p>
-          <p data-i18n="model.sharedText2">Flows und Steps beschreiben Produktverhalten direkt, während Beispiele die erwarteten Ergebnisse lokal nachweisen, bevor das kompilierte Artefakt erstellt wird.</p>
+          <p data-i18n="model.sharedText1">Das Modell soll Entwicklern Kontrolle, Produktteams Klarheit, Support Betriebskontext, Auditoren Nachvollziehbarkeit und KI-Systemen eine strukturierte Quelle der Wahrheit geben.</p>
+          <p data-i18n="model.sharedText2">Flows und Steps sollen Produktverhalten direkt beschreiben, während Beispiele erwartete Ergebnisse nachweisen, bevor ein kompiliertes Artefakt entsteht.</p>
         </div>
       </section>
 
       <section class="model">
         <div class="section-heading narrow">
           <p class="eyebrow" data-i18n="model.pathEyebrow">Vom Modell zum Artefakt</p>
-          <h2 data-i18n="model.pathTitle">Der Weg vom Entwurf zum Artefakt bleibt sichtbar.</h2>
+          <h2 data-i18n="model.pathTitle">Der geplante Weg vom Entwurf zum Artefakt bleibt sichtbar.</h2>
         </div>
         <div class="flow-line" aria-label="Railix Modellprozess">
-          <article><span>01</span><h3>Flows</h3><p data-i18n="model.flowsText">Stellen Produktpfade, Entscheidungen, Befehle, Transformationen und Ergebnisse dar.</p></article>
-          <article><span>02</span><h3>Steps</h3><p data-i18n="model.stepsText">Erfassen konkrete Verhaltenseinheiten, die geprüft und kompiliert werden können.</p></article>
-          <article><span>03</span><h3 data-i18n="model.examplesTitle">Beispiele</h3><p data-i18n="model.examplesText">Dienen als lebende Spezifikationen und als Freigabe für den Build.</p></article>
-          <article><span>04</span><h3 data-i18n="model.artifactTitle">Artefakt</h3><p data-i18n="model.artifactText">Das geprüfte Modell wird zu einer portablen Anwendung für die gewünschte Laufzeitumgebung.</p></article>
+          <article><span>01</span><h3>Flows</h3><p data-i18n="model.flowsText">Sollen Produktpfade, Entscheidungen, Befehle, Transformationen und Ergebnisse darstellen.</p></article>
+          <article><span>02</span><h3>Steps</h3><p data-i18n="model.stepsText">Erfassen konkrete Verhaltenseinheiten, die geprüft und kompiliert werden sollen.</p></article>
+          <article><span>03</span><h3 data-i18n="model.examplesTitle">Beispiele</h3><p data-i18n="model.examplesText">Sollen als lebende Spezifikationen und als Freigabe für den Build dienen.</p></article>
+          <article><span>04</span><h3 data-i18n="model.artifactTitle">Artefakt</h3><p data-i18n="model.artifactText">Das geprüfte Modell soll zu einer portablen Anwendung für die gewünschte Laufzeitumgebung werden.</p></article>
         </div>
       </section>
 
@@ -80,17 +82,17 @@
           <h2 data-i18n="model.technicalTitle">Die wichtigen Teile bleiben ausdrücklich sichtbar.</h2>
         </div>
         <div class="technical-grid">
-          <article><h3 data-i18n="model.inputsTitle">Eingaben</h3><p data-i18n="model.inputsText">Definiere Payloads, Befehle, Umgebungswerte und externe Events als Einstiegspunkte in einen Flow.</p></article>
-          <article><h3 data-i18n="model.behaviorTitle">Verhalten</h3><p data-i18n="model.behaviorText">Nutze Steps für Verzweigungen, Feldtransformation, Validierung, Befehlsausführung und Endzustände.</p></article>
-          <article><h3 data-i18n="model.examplesTitle">Beispiele</h3><p data-i18n="model.technicalExamplesText">Halte erwartete Ein- und Ausgaben lokal fest, damit das Modell geprüft werden kann, bevor ein Artefakt entsteht.</p></article>
-          <article><h3 data-i18n="model.artifactTitle">Artefakt</h3><p data-i18n="model.technicalArtifactText">Kompiliere das geprüfte Modell zu einem deploybaren Anwendungspaket, statt den Editor als Laufzeitumgebung auszuliefern.</p></article>
+          <article><h3 data-i18n="model.inputsTitle">Eingaben</h3><p data-i18n="model.inputsText">Sollen Payloads, Befehle, Umgebungswerte und externe Events als Einstiegspunkte in einen Flow definieren.</p></article>
+          <article><h3 data-i18n="model.behaviorTitle">Verhalten</h3><p data-i18n="model.behaviorText">Steps sollen Verzweigungen, Feldtransformation, Validierung, Befehlsausführung und Endzustände abdecken.</p></article>
+          <article><h3 data-i18n="model.examplesTitle">Beispiele</h3><p data-i18n="model.technicalExamplesText">Sollen erwartete Ein- und Ausgaben lokal festhalten, damit das Modell geprüft werden kann, bevor ein Artefakt entsteht.</p></article>
+          <article><h3 data-i18n="model.artifactTitle">Artefakt</h3><p data-i18n="model.technicalArtifactText">Die geplante Grenze ist ein deploybares Anwendungspaket, nicht der Editor als Laufzeitumgebung.</p></article>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <span>Railix</span>
-      <span class="footer-copy"><span data-i18n="footer.tagline">Ausführbare Softwaremodelle. Kompilierte Anwendungen, die überall laufen.</span><span data-i18n="footer.copyright">© 2026 Railix. Alle Rechte vorbehalten.</span></span>
+      <span class="footer-copy"><span data-i18n="footer.tagline">Eine Vision für ausführbare Softwaremodelle und portable kompilierte Anwendungen.</span><span data-i18n="footer.copyright">© 2026 Railix. Alle Rechte vorbehalten.</span></span>
     </footer>
   </body>
 </html>
