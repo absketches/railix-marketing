@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Railix app icon</title>
+  <desc id="desc">Railix execution mark on a dark square background.</desc>
+  <rect width="512" height="512" fill="#071316" />
+  <g transform="translate(64 160) scale(0.75)" fill="none" stroke="#f4f2e8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M104 48V208M206 48V208" stroke-width="30"/>
+    <path d="M126 112H184" stroke-width="12"/>
+    <rect x="79" y="87" width="50" height="50" rx="8" fill="#071316" stroke-width="14"/>
+    <rect x="181" y="119" width="50" height="50" rx="8" fill="#071316" stroke-width="14"/>
+    <path d="M292 66L374 128L292 190" stroke-width="30"/>
+  </g>
+  <rect x="380" y="241" width="30" height="30" rx="6" fill="#8af7df"/>
+</svg>
