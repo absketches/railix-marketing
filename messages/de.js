@@ -10,7 +10,7 @@ window.RailixMessages.de = {
     contact: "Kontakt",
   },
   footer: {
-    tagline: "Eine Vision für ausführbare Softwaremodelle und portable kompilierte Anwendungen.",
+    tagline: "Ausführbare Softwaremodelle, portable kompilierte Anwendungen und Betrieb auf deiner Infrastruktur.",
     copyright: "© 2026 Railix. Alle Rechte vorbehalten.",
   },
   home: {

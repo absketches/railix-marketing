@@ -10,7 +10,7 @@ window.RailixMessages.en = {
     contact: "Contact",
   },
   footer: {
-    tagline: "A vision for executable software models and portable compiled applications.",
+    tagline: "Executable software models, portable compiled applications and operations on your infrastructure.",
     copyright: "© 2026 Railix. All rights reserved.",
   },
   home: {
