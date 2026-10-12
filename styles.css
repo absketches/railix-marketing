@@ -872,7 +872,8 @@ main {
   display: grid;
   grid-template-areas:
     "logo nav"
-    "meta meta";
+    "tagline nav"
+    "publisher copyright";
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 8px clamp(24px, 4vw, 54px);
@@ -894,8 +895,8 @@ main {
 }
 
 .footer-brand p {
-  grid-area: meta;
-  max-width: calc(100% - 290px);
+  grid-area: tagline;
+  max-width: 760px;
   margin: 0;
   color: var(--muted);
   font-size: 14px;
@@ -903,9 +904,33 @@ main {
   line-height: 1.45;
 }
 
+.footer-publisher {
+  display: inline-flex;
+  grid-area: publisher;
+  align-items: center;
+  gap: 8px;
+  justify-self: start;
+  color: rgba(87, 83, 71, 0.86);
+  font-size: 13px;
+  font-weight: 760;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.footer-publisher img {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  flex: 0 0 auto;
+}
+
+.footer-publisher:hover {
+  color: var(--teal);
+}
+
 .footer-copyright {
   display: block;
-  grid-area: meta;
+  grid-area: copyright;
   justify-self: end;
   margin: 0;
   color: rgba(87, 83, 71, 0.78);
@@ -978,6 +1003,7 @@ main {
       "logo"
       "nav"
       "tagline"
+      "publisher"
       "copyright";
     grid-template-columns: 1fr;
     gap: 12px;
@@ -991,6 +1017,10 @@ main {
   .footer-brand p {
     grid-area: tagline;
     max-width: none;
+  }
+
+  .footer-publisher {
+    justify-self: start;
   }
 
   .footer-copyright {
@@ -1175,6 +1205,7 @@ main {
     grid-template-areas:
       "logo"
       "tagline"
+      "publisher"
       "nav"
       "copyright";
     gap: 12px;

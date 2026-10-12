@@ -11,7 +11,8 @@ window.RailixMessages.en = {
   },
   footer: {
     tagline: "Executable software models, portable compiled applications and operations on your infrastructure.",
-    copyright: "© 2026 Railix. All rights reserved.",
+    publisher: "Railix is a NanoNative product.",
+    copyright: "© 2026 NanoNative. All rights reserved.",
   },
   home: {
     title: "Railix | Software Products From One Executable Model",

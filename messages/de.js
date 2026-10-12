@@ -11,7 +11,8 @@ window.RailixMessages.de = {
   },
   footer: {
     tagline: "Ausführbare Softwaremodelle, portable kompilierte Anwendungen und Betrieb auf deiner Infrastruktur.",
-    copyright: "© 2026 Railix. Alle Rechte vorbehalten.",
+    publisher: "Railix ist ein Produkt von NanoNative.",
+    copyright: "© 2026 NanoNative. Alle Rechte vorbehalten.",
   },
   home: {
     title: "Railix | Softwareprodukte aus einem ausführbaren Modell",
